@@ -1,0 +1,22 @@
+.MenuComp {
+    width: 252px;
+    height: 100%;
+    background-color: #fff;
+    padding: 1.5rem;
+}
+
+.menuUl {
+    /* padding: .3rem; */
+    margin-top: 4rem;
+    color: #8E92BC;
+}
+
+.menuUl .item {
+    /* background-color: #F5F5F7; */
+    padding: .7rem 1.4rem;
+    cursor: pointer;
+}
+.menuUl .item.active{
+    background-color: #f3f4f6;
+    color: black;
+}
