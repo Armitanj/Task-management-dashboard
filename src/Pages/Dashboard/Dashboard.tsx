@@ -25,7 +25,7 @@ export default function Dashboard(): JSX.Element {
                 </div>
             </div>
             <div className=''>
-                <RightSide content="Right Side Content" />
+                <RightSide />
             </div>
         </div>
     )

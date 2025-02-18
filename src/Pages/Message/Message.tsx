@@ -3,7 +3,6 @@ import './Message.css'
 import Menubar from '../../Components/Menubar/Menubar'
 import Navbar from '../../Components/Navbar/Navbar'
 import { StyledEngineProvider } from '@mui/material'
-import RightSide from '../../Components/RightSide/RightSide'
 
 export default function Message(): JSX.Element {
   return (
@@ -17,7 +16,6 @@ export default function Message(): JSX.Element {
         </StyledEngineProvider>
       </div>
       <div className=''>
-        <RightSide content="Right Side Content" />
       </div>
     </div>
   )

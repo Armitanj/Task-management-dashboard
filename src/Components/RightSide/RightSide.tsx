@@ -1,13 +1,15 @@
 import React from 'react'
 import './RightSide.css'
+import Calendar from '../Calendar/Calendar';
 
-// Define an interface for the props
-interface RightSideProps {
-  content: string;
-}
 
-export default function RightSide({ content }: RightSideProps) {
+export default function RightSide() {
   return (
-    <div className='rightSideComp bg-[#F5F5F7]'>{content}</div>
+    <>
+      <div className='rightSideComp bg-[#F5F5F7]'>
+
+      <Calendar />
+      </div>
+    </>
   )
 }

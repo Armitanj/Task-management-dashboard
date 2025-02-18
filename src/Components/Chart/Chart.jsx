@@ -3,9 +3,12 @@ import Select, { selectClasses } from '@mui/joy/Select';
 import Option from '@mui/joy/Option';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';  
 import React from 'react'
+import Tooltip from '@mui/material/Tooltip';
+import Button from '@mui/material/Button';
 import './Chart.css'
 
 export default function Chart() {
+    const data = [0, 2, 0, 3, 1, 2, 1];
 
     return (
         <div className='chartComp flex flex-col bg-[#F5F5F7] rounded-2xl'>
@@ -34,23 +37,21 @@ export default function Chart() {
                 xAxis={[{ scaleType: 'point', data: ['S', 'M', 'Tu', 'W', 'Th', 'F', 'Sa'] }]}
                 series={[
                     {
-                        data: [0, 2, 0, 3, 1, 2, 1],
-
-                        showMark: ({ index }) => index === 1,
-                        // showLine: false,
+                        data: data,
+                        showMark: ({ index }) => (
+                            <Tooltip title={`${data[index]} tasks`} placement="top">
+                                <Button variant="plain">{data[index]}</Button>
+                            </Tooltip>
+                        ),
                         curve: 'monotoneX',
                         color: '#000',
-                        // markerSize: 4,
                         area: false,
-                        // strokeWidth: 2,
                     }
                 ]}
                 width={422}
-                // height={130}
                 grid={{ vertical: true }}
                 margin={{ left: 30, right: 30, top: 30, bottom: 30 }}
             />
         </div>
-
     )
 }
