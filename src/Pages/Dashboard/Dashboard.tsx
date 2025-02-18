@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../../Components/Navbar/Navbar'
 import Menubar from '../../Components/Menubar/Menubar'
 import RightSide from '../../Components/RightSide/RightSide'
-import { StyledEngineProvider } from '@mui/material/styles';
+import { StyledEngineProvider } from '@mui/material/styles'
 import './Dashboard.css'
 import RunningTask from '../../Components/RunningTask/RunningTask'
 import Chart from '../../Components/Chart/Chart'
