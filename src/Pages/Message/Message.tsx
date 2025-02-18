@@ -13,7 +13,7 @@ export default function Message(): JSX.Element {
       </div>
       <div className=''>
         <StyledEngineProvider injectFirst>
-          <Navbar title="Message" subTitle="Your Subtitle Here" />
+          <Navbar title="Message" subTitle="" />
         </StyledEngineProvider>
       </div>
       <div className=''>

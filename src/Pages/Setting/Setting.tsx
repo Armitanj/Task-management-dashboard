@@ -13,7 +13,7 @@ export default function Setting(): JSX.Element {
       </div>
       <div className=''>
         <StyledEngineProvider injectFirst>
-          <Navbar title="Settings" subTitle="Your Subtitle Here" />
+          <Navbar title="Settings" subTitle="" />
         </StyledEngineProvider>
       </div>
       <div className=''>
