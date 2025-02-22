@@ -38,9 +38,10 @@ const Calendar: React.FC = () => {
             <Button
               variant="contained"
               sx={{
-                borderRadius: "20px",
+                borderRadius: "50%",
                 padding: "10px",
-                minWidth: "40px",
+                minWidth: "44px",
+                marginTop:"0.5rem",
                 backgroundColor: day.isSame(dayjs(), "day") ? "#000" : "#fff",
                 color: day.isSame(dayjs(), "day") ? "#fff" : "#000",
                 boxShadow: day.isSame(dayjs(), "day") ? "0px 4px 10px rgba(0,0,0,0.2)" : "none",
