@@ -6,6 +6,7 @@ import { StyledEngineProvider } from '@mui/material/styles'
 import './Dashboard.css'
 import RunningTask from '../../Components/RunningTask/RunningTask'
 import Chart from '../../Components/Chart/Chart'
+import MonthlyMentors from '../../Components/MonthlyMentors/MonthlyMentors'
 
 export default function Dashboard(): JSX.Element {
     return (
@@ -22,6 +23,9 @@ export default function Dashboard(): JSX.Element {
                 <div className='flex justify-between'>
                     <RunningTask runningTasks={5} totalTasks={10} />
                     <Chart title="Weekly Progress" data={[10, 20, 30, 40, 50, 60, 70]} />
+                </div>
+                <div className='mt-10!'>
+                    <MonthlyMentors />
                 </div>
             </div>
             <div className=''>
