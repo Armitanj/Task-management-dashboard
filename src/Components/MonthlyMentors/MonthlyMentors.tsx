@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { getMentors } from '../../Api/MentorsList';
 import { Avatar, Card } from "@mui/material";
 import { Star, ClipboardCheck } from "lucide-react";
-import './MonthlyMentors.css'
+import './MonthlyMentors.css';
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-
-
+import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
+import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
+import SwiperCore from 'swiper';
 
 type Mentors = {
   id: number;
@@ -22,33 +22,39 @@ type Mentors = {
   reviews: number;
 };
 
-
-
 function MonthlyMentors(): JSX.Element {
   const [mentors, setMentors] = useState<Mentors[]>([]);
+  const [swiper, setSwiper] = useState<SwiperCore>();
 
   useEffect(() => {
     getMentors().then((data) => setMentors(data as Mentors[]));
   }, []);
 
-
   return (
-    <div className="p-6 min-h-screen w-[800px]!">
-      <h2 className="text-2xl font-semibold mb-10!">Monthly Mentors</h2>
+    <div className="p-6! w-[800px]! ">
+      <div className='flex justify-between items-baseline'>
+        <h2 className="text-2xl font-semibold mb-10!">Monthly Mentors</h2>
+        <div className='flex gap-4'>
+          <button onClick={() => swiper?.slidePrev()}>
+            <ArrowBackIosRoundedIcon className='cursor-pointer' />
+          </button>
+          <button onClick={() => swiper?.slideNext()}>
+            <ArrowForwardIosRoundedIcon className='cursor-pointer' />
+          </button>
+        </div>
+      </div>
 
       <Swiper
         spaceBetween={20}
         pagination={{ clickable: true }}
         slidesPerView={2}
         draggable={true}
-
+        onSwiper={setSwiper}
       >
-
-
         {mentors.map((mentor) => (
           <SwiperSlide key={mentor.id}>
-            <Card className="p-6! h-36 max-w-xl flex items-center gap-4 shadow-2xl rounded-xl bg-white">
-              <Avatar className="w-18! h-18!">
+            <Card className="p-5! w-[350px] mb-3! flex items-center gap-4 shadow-xl rounded-2xl! bg-white">
+              <Avatar className="w-17! h-17!">
                 <img src={mentor.profilePic} alt={mentor.name} className="rounded-full" />
               </Avatar>
               <div className="flex-1">
@@ -67,15 +73,10 @@ function MonthlyMentors(): JSX.Element {
               </div>
             </Card>
           </SwiperSlide>
-
         ))}
-
-
       </Swiper>
-
-
     </div>
   );
-};
+}
 
 export default MonthlyMentors;
