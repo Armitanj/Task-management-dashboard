@@ -5,10 +5,15 @@
     padding: 1.5rem;
 }
 
+.MenuComp h1 {
+    font-family: 'poppins-semiBold';
+}
+
 .menuUl {
     /* padding: .3rem; */
     margin-top: 4rem;
     color: #8E92BC;
+    font-family: 'poppins-medium';
 }
 
 .menuUl .item {
@@ -16,7 +21,8 @@
     padding: .7rem 1.4rem;
     cursor: pointer;
 }
-.menuUl .item.active{
+
+.menuUl .item.active {
     background-color: #f3f4f6;
     color: black;
 }

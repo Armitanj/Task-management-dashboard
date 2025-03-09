@@ -20,7 +20,7 @@ export default function RunningTask({ runningTasks, totalTasks }: RunningTaskPro
       <div className='flex gap-5 items-center'>
         <div className='flex'>
           <Box sx={{ width: 70, height: 70, border: '3px solid rgba(213, 213, 213, 0.355)', borderRadius: '50%', display: 'flex' }} alignItems='center' justifyContent='center'>
-            <Typography className='font-[poppins-light]'>{progress.toFixed(0)}%</Typography>
+            <Typography className='typography'>{progress.toFixed(0)}%</Typography>
           </Box>
           <CircularProgress value={progress} variant='determinate' thickness={2} size={70} sx={{ marginLeft: '-4.4rem' }} />
         </div>
