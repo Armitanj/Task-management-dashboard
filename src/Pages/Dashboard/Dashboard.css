@@ -1,5 +1,13 @@
-.dashComponent{
+.dashComponent {
     width: 100%;
     height: 100%;
-    background-color: #f9fafb ;
+    background-color: #f9fafb;
+}
+
+@media (width <=470px) {
+    .dashComponent {
+        padding: 7rem;
+
+    }
+
 }

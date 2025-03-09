@@ -31,9 +31,9 @@ function MonthlyMentors(): JSX.Element {
   }, []);
 
   return (
-    <div className="p-6! w-[800px]! ">
-      <div className='flex justify-between items-baseline'>
-        <h2 className="text-2xl font-semibold mb-10!">Monthly Mentors</h2>
+    <div className="p-6! w-120 sm:w-[800px] items-center">
+      <div className='flex justify-between items-baseline w-[100%] sm:w-auto '>
+        <h2 className="text-2xl font-semibold mb-8!">Monthly Mentors</h2>
         <div className='flex gap-4'>
           <button onClick={() => swiper?.slidePrev()}>
             <ArrowBackIosRoundedIcon className='cursor-pointer' />
@@ -47,13 +47,23 @@ function MonthlyMentors(): JSX.Element {
       <Swiper
         spaceBetween={20}
         pagination={{ clickable: true }}
-        slidesPerView={2}
         draggable={true}
         onSwiper={setSwiper}
+        breakpoints={{
+          0: {
+            slidesPerView: 1!,
+          },
+          640: {
+            slidesPerView: 1!,
+          },
+          768: {
+            slidesPerView: 2!,
+          }
+        }}
       >
         {mentors.map((mentor) => (
           <SwiperSlide key={mentor.id}>
-            <Card className="p-5! w-[350px] mb-3! flex items-center gap-4 shadow-xl rounded-2xl! bg-white">
+            <Card className="p-5! w-[90] sm:w-[350px] my-2! flex items-center gap-4 shadow-xl rounded-2xl! bg-white">
               <Avatar className="w-17! h-17!">
                 <img src={mentor.profilePic} alt={mentor.name} className="rounded-full" />
               </Avatar>
