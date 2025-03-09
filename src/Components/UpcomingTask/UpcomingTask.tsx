@@ -17,7 +17,7 @@ interface Tasks {
   time: string;
   timeIcon: string;
   participants: [{ name: string; avatar: string }];
-
+  isToday: boolean;
 }
 export default function UpcomingTask(): JSX.Element {
   const [tasks, setTasks] = useState<Tasks[]>([])
@@ -28,9 +28,9 @@ export default function UpcomingTask(): JSX.Element {
   }, [])
 
   return (
-    <div className='p-6! w-[800px]!'>
-      <div className='flex justify-between items-baseline'>
-        <h2 className='text-2xl font-semibold mb-10!'>Upcoming Task</h2>
+    <div className='pt-3! p-6! w-[470px] sm:w-[800px]'>
+      <div className='flex justify-between items-baseline w-[430px] sm:w-auto'>
+        <h2 className='text-2xl font-semibold mb-8!'>Upcoming Task</h2>
         <div className='flex gap-4'>
           <button onClick={() => swiper?.slidePrev()}>
             <ArrowBackIosRoundedIcon className='cursor-pointer' />
@@ -45,13 +45,24 @@ export default function UpcomingTask(): JSX.Element {
         <Swiper
           spaceBetween={20}
           pagination={{ clickable: true }}
-          slidesPerView={2}
+
           draggable={true}
           onSwiper={setSwiper}
+          breakpoints={{
+            0: {
+              slidesPerView: 1!,
+            },
+            640: {
+              slidesPerView: 1!,
+            },
+            768: {
+              slidesPerView: 2!,
+            }
+          }}
         >
-          {tasks.map((task) => (
+          {tasks.filter(task => task.isToday === false).map((task) => (
             <SwiperSlide key={task.id}>
-              <Card className='w-[350px] rounded-2xl! p-8! bg-white shadow-2xl mb-3!'>
+              <Card className='w-[90%] sm:[350px] rounded-2xl! p-8! bg-white shadow-2xl my-2!'>
                 <img src={task.image} />
                 <div className='py-3!'>
                   <h3 className="text-lg font-semibold">{task.title}</h3>

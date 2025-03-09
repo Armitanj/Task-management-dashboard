@@ -11,8 +11,8 @@ import UpcomingTask from '../../Components/UpcomingTask/UpcomingTask'
 
 export default function Dashboard(): JSX.Element {
     return (
-        <div className='dashComponent flex justify-between'>
-            <div className=''>
+        <div className='dashComponent flex justify-between flex-col sm:flex-row items-center sm:items-start'>
+            <div className='hidden sm:block'>
                 <Menubar />
             </div>
             <div className=''>
@@ -21,11 +21,11 @@ export default function Dashboard(): JSX.Element {
                 </StyledEngineProvider>
                 <br />
                 <br />
-                <div className='flex justify-evenly'>
-                    <RunningTask runningTasks={5} totalTasks={10} />
-                    <Chart title="Weekly Progress" data={[10, 20, 30, 40, 50, 60, 70]} />
+                <div className='flex gap-7 sm:gap-0 sm:justify-evenly flex-col sm:flex-row items-center'>
+                    <RunningTask runningTasks={65} totalTasks={100} />
+                    <Chart title="Activity" />
                 </div>
-                <div className='mt-10!'>
+                <div className='mt-6!'>
                     <MonthlyMentors />
 
                 </div>
