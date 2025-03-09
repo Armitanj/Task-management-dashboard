@@ -12,7 +12,7 @@ export default function RunningTask({ runningTasks, totalTasks }: RunningTaskPro
   const progress = (runningTasks / totalTasks) * 100;
 
   return (
-    <div className='RunningTaskComp font-[poppins-medium] bg-[#141522] w-[90%] sm:w-[194px] h-[124px] sm:h-[214px] rounded-2xl text-white flex flex-row sm:flex-col justify-around sm:justify-evenly pl-6!'>
+    <div className='RunningTaskComp font-[poppins-medium] bg-[#141522] w-90 sm:w-[194px] h-[124px] sm:h-[214px] rounded-2xl text-white flex flex-row sm:flex-col justify-around sm:justify-evenly pl-6!'>
       <div className='flex flex-col sm:flex-col gap-6 sm:gap-7 justify-center'>
         <h4>Running Task</h4>
         <span className='text-3xl'>{runningTasks}</span>

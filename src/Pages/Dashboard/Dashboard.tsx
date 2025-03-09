@@ -12,7 +12,7 @@ import './../../index.css'
 
 export default function Dashboard(): JSX.Element {
     return (
-        <div className='dashComponent flex justify-between flex-col sm:flex-row items-center sm:items-start overflow-hidden'>
+        <div className='dashComponent flex justify-between flex-col sm:flex-row items-center sm:items-start'>
             <div className='hidden sm:block'>
                 <Menubar />
             </div>
@@ -22,15 +22,15 @@ export default function Dashboard(): JSX.Element {
                 </StyledEngineProvider>
                 <br />
                 <br />
-                <div className='flex gap-7 sm:gap-0 sm:justify-evenly flex-col sm:flex-row items-center'>
+                <div className='flex gap-7 sm:gap-0 sm:justify-evenly flex-col sm:flex-row items-center '>
                     <RunningTask runningTasks={65} totalTasks={100} />
                     <Chart title="Activity" />
                 </div>
-                <div className='mt-6!'>
+                <div className=' '>
                     <MonthlyMentors />
 
                 </div>
-                <div className='w-[360px]!'>
+                <div className=''>
                     <UpcomingTask  />
                 </div>
             </div>

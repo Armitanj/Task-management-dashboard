@@ -31,8 +31,8 @@ function MonthlyMentors(): JSX.Element {
   }, []);
 
   return (
-    <div className="p-6! w-120 sm:w-[800px] items-center">
-      <div className='flex justify-between items-baseline w-[100%] sm:w-auto '>
+       <div className="p-6! w-96 sm:w-[800px] items-center">
+      <div className='flex justify-between pl-8! items-baseline w-[100%] sm:w-auto '>
         <h2 className="text-xl sm:text-2xl font-semibold mb-8!">Monthly Mentors</h2>
         <div className='flex gap-4'>
           <button onClick={() => swiper?.slidePrev()}>
@@ -62,8 +62,8 @@ function MonthlyMentors(): JSX.Element {
         }}
       >
         {mentors.map((mentor) => (
-          <SwiperSlide key={mentor.id}>
-            <Card className="p-5! w-[90%] sm:w-[350px] my-2! flex items-center gap-4 shadow-xl rounded-2xl! bg-white">
+          <SwiperSlide key={mentor.id} className=''>
+            <Card className="p-5! w-[100%] sm:w-[350px] ps-7! my-2! flex items-center gap-4 shadow-xl rounded-2xl! bg-white">
               <Avatar className="w-17! h-17!">
                 <img src={mentor.profilePic} alt={mentor.name} className="rounded-full" />
               </Avatar>
