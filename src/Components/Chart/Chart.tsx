@@ -14,7 +14,7 @@ export default function Chart({ title }: ChartProps) {
   const chartData = [0, 2, 0, 3, 1, 2, 1];
   return (
     <div className='chartComp flex flex-col bg-[#F5F5F7] rounded-2xl w-[90%] sm:w-[470px] '>
-      <div className='flex flex-row justify-between items-center w-[90]'>
+      <div className='flex flex-row justify-between items-center w-[90%]'>
         <h4 className='relative'>{title}</h4>
         <Select
           placeholder="This Week"
