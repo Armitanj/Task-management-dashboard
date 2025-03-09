@@ -13,7 +13,7 @@ export default function Navbar({ title, subTitle }: NavbarProps) {
 
     return (
         <div className="navComp flex flex-col-reverse sm:flex-row  justify-between items-center w-[100%]! px-10! pt-3!">
-            <div className='flex-col gap-2 hidden sm:block'>
+            <div className='flex-col gap-2 hidden sm:block font-[poppins-medium]'>
                 <h1 className=' text-[24px]'>{title}</h1>
                 <span className='text-[#54577A]'>{subTitle}</span>
             </div>

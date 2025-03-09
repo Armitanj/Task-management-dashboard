@@ -4,16 +4,10 @@
     background-color: #fff;
     padding: 1.5rem;
 }
-
-.MenuComp h1 {
-    font-family: 'poppins-semiBold';
-}
-
 .menuUl {
     /* padding: .3rem; */
     margin-top: 4rem;
     color: #8E92BC;
-    font-family: 'poppins-medium';
 }
 
 .menuUl .item {

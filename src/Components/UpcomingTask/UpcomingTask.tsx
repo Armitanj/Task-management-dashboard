@@ -28,9 +28,9 @@ export default function UpcomingTask(): JSX.Element {
   }, [])
 
   return (
-    <div className='pt-3! p-6! w-[470px] sm:w-[800px]'>
-      <div className='flex justify-between items-baseline w-[430px] sm:w-auto'>
-        <h2 className='text-2xl font-semibold mb-8!'>Upcoming Task</h2>
+    <div className='p-6! w-120 sm:w-[800px]'>
+      <div className='flex justify-between items-baseline w-[100%] sm:w-auto'>
+        <h2 className='text-xl sm:text-2xl font-semibold mb-8!'>Upcoming Task</h2>
         <div className='flex gap-4'>
           <button onClick={() => swiper?.slidePrev()}>
             <ArrowBackIosRoundedIcon className='cursor-pointer' />

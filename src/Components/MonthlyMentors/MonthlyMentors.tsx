@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { getMentors } from '../../Api/MentorsList';
 import { Avatar, Card } from "@mui/material";
 import { Star, ClipboardCheck } from "lucide-react";
-import './MonthlyMentors.css';
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -11,6 +10,7 @@ import 'swiper/css/scrollbar';
 import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import SwiperCore from 'swiper';
+import './MonthlyMentors.css';
 
 type Mentors = {
   id: number;
@@ -33,7 +33,7 @@ function MonthlyMentors(): JSX.Element {
   return (
     <div className="p-6! w-120 sm:w-[800px] items-center">
       <div className='flex justify-between items-baseline w-[100%] sm:w-auto '>
-        <h2 className="text-2xl font-semibold mb-8!">Monthly Mentors</h2>
+        <h2 className="text-xl sm:text-2xl font-semibold mb-8!">Monthly Mentors</h2>
         <div className='flex gap-4'>
           <button onClick={() => swiper?.slidePrev()}>
             <ArrowBackIosRoundedIcon className='cursor-pointer' />
