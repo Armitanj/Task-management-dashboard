@@ -28,9 +28,9 @@ export default function UpcomingTask(): JSX.Element {
   }, [])
 
   return (
-    <div className='p-6! w-110 sm:w-[800px]'>
-      <div className='flex justify-between items-baseline w-[90%]! sm:w-auto'>
-        <h2 className='text-xl sm:text-2xl font-semibold mb-8!'>Upcoming Task</h2>
+    <div className='p-6! w-96 sm:w-[800px] '>
+      <div className='flex justify-between  ml-5! items-baseline w-80 sm:w-auto'>
+        <h2 className='text-xl sm:text-2xl font-semibold mb-8! '>Upcoming Task</h2>
         <div className='flex gap-4'>
           <button onClick={() => swiper?.slidePrev()}>
             <ArrowBackIosRoundedIcon className='cursor-pointer' />
@@ -62,7 +62,7 @@ export default function UpcomingTask(): JSX.Element {
         >
           {tasks.filter(task => task.isToday === false).map((task) => (
             <SwiperSlide key={task.id}>
-              <Card className='w-[90%] sm:[350px] rounded-2xl! p-8! bg-white shadow-2xl my-2!'>
+              <Card className='w-[100%] sm:[350px] rounded-2xl! p-8! bg-white shadow-2xl my-2!'>
                 <img src={task.image} />
                 <div className='py-3!'>
                   <h3 className="text-lg font-semibold">{task.title}</h3>
