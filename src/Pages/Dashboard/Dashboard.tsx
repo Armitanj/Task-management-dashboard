@@ -8,6 +8,7 @@ import RunningTask from '../../Components/RunningTask/RunningTask'
 import Chart from '../../Components/Chart/Chart'
 import MonthlyMentors from '../../Components/MonthlyMentors/MonthlyMentors'
 import UpcomingTask from '../../Components/UpcomingTask/UpcomingTask'
+import './../../index.css'
 
 export default function Dashboard(): JSX.Element {
     return (
