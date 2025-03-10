@@ -29,7 +29,7 @@ export default function UpcomingTask(): JSX.Element {
 
   return (
     <div className='p-6! w-96 sm:w-[800px] '>
-      <div className='flex justify-between  ml-5! items-baseline w-80 sm:w-auto'>
+      <div className='flex justify-between  items-baseline w-80 sm:w-auto'>
         <h2 className='text-xl sm:text-2xl font-semibold mb-8! '>Upcoming Task</h2>
         <div className='flex gap-4'>
           <button onClick={() => swiper?.slidePrev()}>

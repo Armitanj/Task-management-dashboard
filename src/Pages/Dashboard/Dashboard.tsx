@@ -26,11 +26,11 @@ export default function Dashboard(): JSX.Element {
                     <RunningTask runningTasks={65} totalTasks={100} />
                     <Chart title="Activity" />
                 </div>
-                <div className=' '>
+                <div className='ml-5 sm:ml-0 '>
                     <MonthlyMentors />
 
                 </div>
-                <div className=''>
+                <div className='ml-5 sm:ml-0'>
                     <UpcomingTask  />
                 </div>
             </div>

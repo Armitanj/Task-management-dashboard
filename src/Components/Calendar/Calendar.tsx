@@ -31,7 +31,7 @@ const Calendar: React.FC = () => {
       </Box>
 
       {/* نمایش روزهای هفته */}
-      <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "10px" }}>
+      <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "" }}>
         {weekDays.map((day) => (
           <Box key={day.toString()} sx={{ textAlign: "center" }}>
             <Typography variant="caption" sx={{ color: "#666" }}>{day.format("dd")}</Typography>

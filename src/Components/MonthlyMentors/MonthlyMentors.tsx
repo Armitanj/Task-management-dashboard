@@ -31,8 +31,8 @@ function MonthlyMentors(): JSX.Element {
   }, []);
 
   return (
-       <div className="p-6! w-96 sm:w-[800px] items-center mt-7! ">
-      <div className='flex justify-between ml-5! items-baseline w-80 sm:w-auto '>
+       <div className="p-6! w-96 sm:w-[800px] items-center mt-7 sm:mt-0">
+      <div className='flex justify-between items-baseline w-80 sm:w-auto '>
         <h2 className="text-xl sm:text-2xl font-semibold mb-8!">Monthly Mentors</h2>
         <div className='flex gap-4'>
           <button onClick={() => swiper?.slidePrev()}>
