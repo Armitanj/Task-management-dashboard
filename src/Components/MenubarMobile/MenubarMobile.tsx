@@ -57,7 +57,7 @@ export default function MenubarMobile({ isOpen, onClose }: MenubarMobileProps) {
             {/* لایه‌ی تیره در پس‌زمینه برای وقتی که منو باز است */}
             {isOpen && (
                 <div
-                    className="fixed inset-0 bg-opacity-50! z-40"
+                    className="fixed inset-0 bg-black opacity-50 z-40"
                     onClick={onClose}
                 />
             )}

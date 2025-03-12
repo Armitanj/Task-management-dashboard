@@ -27,7 +27,7 @@ export default function Dashboard(): JSX.Element {
                     <Navbar title="Hi, Skylar Dias" subTitle="Let's finish your task today!" onToggleMenu={toggleMenu} />
                 </StyledEngineProvider>
                 <br />
-                <br />
+                
 
                 <div className='bg-[#FCFCFC] sm:bg-auto justify-center!'>
 
@@ -41,7 +41,7 @@ export default function Dashboard(): JSX.Element {
                     <RunningTask runningTasks={65} totalTasks={100} />
                     <Chart title="Activity" />
                 </div>
-                <div className=''>
+                <div className='mt-4!'>
                     <MonthlyMentors />
 
                 </div>
@@ -50,9 +50,7 @@ export default function Dashboard(): JSX.Element {
                 </div>
             </div>
             </div>
-            <div className='flex justify-center'>
                 <RightSide />
-            </div>
             <MenubarMobile
         isOpen={menuOpen}
         onClose={() => setMenuOpen(false)}
