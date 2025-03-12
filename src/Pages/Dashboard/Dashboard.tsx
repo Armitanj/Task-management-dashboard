@@ -18,7 +18,7 @@ export default function Dashboard(): JSX.Element {
     const toggleMenu = () => setMenuOpen(prev => !prev);
 
     return (
-        <div className='dashComponent flex justify-between flex-col sm:flex-row items-center sm:items-start'>
+        <div className='dashComponent flex justify-between flex-col sm:flex-row items-center sm:items-start overflow-hidden'>
             <div className='hidden sm:block'>
                 <Menubar />
             </div>
@@ -50,7 +50,7 @@ export default function Dashboard(): JSX.Element {
                 </div>
             </div>
             </div>
-            <div className=''>
+            <div className='flex justify-center'>
                 <RightSide />
             </div>
             <MenubarMobile
