@@ -32,7 +32,7 @@ export default function Dashboard(): JSX.Element {
                 <div className='bg-[#FCFCFC] sm:bg-auto justify-center!'>
 
 
-                <div className='flex-col gap-2 block sm:hidden font-[poppins-medium] mx-6!'>
+                <div className='flex-col gap-2 block sm:hidden font-[poppins-medium] mx-6! mt-2!'>
                     <h1 className=' text-[24px]'>Hi, Skylar Dias</h1>
                     <span className='text-[#54577A]'>Let's finish your task today!</span>
                 </div>

@@ -31,7 +31,7 @@ export default function MenubarMobile({ isOpen, onClose }: MenubarMobileProps) {
                 <div className='MenuComp'>
                     <div className="flex items-center justify-center gap-4">
                         <img src="../../images/Vector.png" alt="logo" />
-                        <h1 className='text-3xl font-[poppins-semiBold]'>Nuegas</h1>
+                        <h1 className='text-3xl font-[poppins-semiBold]!'>Nuegas</h1>
                     </div>
                     <ul className='menuUl flex flex-col justify-between gap-6 font-[poppins-medium]'>
                         <Link to="/" className={`item rounded-2xl flex gap-4 hover:bg-gray-100 hover:text-black transition ease-in-out ${activePath === "/" ? "active" : ""}`} onClick={() => setActivePath("/")}>
