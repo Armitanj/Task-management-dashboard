@@ -81,7 +81,7 @@ const mentors = [
         reviews: Math.floor(Math.random() * (200 - 10 + 1)) + 10,
         isRecent: true,
         isMain: false,
-    },
+  },
     {
         id: 8,
         name: "Olivia Davis",
