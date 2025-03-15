@@ -61,7 +61,7 @@ const tasks = [
       { name: "Michael Lee", avatar: "https://i.pravatar.cc/150?img=4" }
     ],
     isToday: false,
-    isTimeLimit: false,
+    isTimeLimit: true,
     isNew: false,
   },
   {
@@ -143,7 +143,7 @@ const tasks = [
     ],
     isToday: false,
     isTimeLimit: false,
-    isNew: false,
+    isNew: true,
   },
   {
     id: 10,
@@ -158,7 +158,7 @@ const tasks = [
 
     ],
     isToday: false,
-    isTimeLimit: false,
+    isTimeLimit: true,
     isNew: false,
   },
   {
@@ -283,7 +283,7 @@ const tasks = [
       { name: "Olivia Martinez", avatar: "https://randomuser.me/api/portraits/women/10.jpg" }
     ],
     isToday: false,
-    isTimeLimit: true,
+    isTimeLimit: false,
     isNew: true,
   },
   {
@@ -313,7 +313,7 @@ const tasks = [
       { name: "Sophia Brown", avatar: "https://randomuser.me/api/portraits/women/7.jpg" }
     ],
     isToday: false,
-    isTimeLimit: true,
+    isTimeLimit: false,
     isNew: true,
   },
   {

@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import Menubar from '../../Components/DashboardComps/Menubar/Menubar'
 import Navbar from '../../Components/DashboardComps/Navbar/Navbar'
 import { StyledEngineProvider } from '@mui/material'
-
 import './Mentor.css'
 import MenubarMobile from '../../Components/DashboardComps/MenubarMobile/MenubarMobile'
+import RecentMentors from '../../Components/MentorsComps/RecentMentors/RecentMentors'
+import AllMentors from '../../Components/MentorsComps/AllMentors/AllMentors'
 
 export default function Mentor(): JSX.Element {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,10 +30,10 @@ export default function Mentor(): JSX.Element {
 
 
           <div className=''>
-
+            <RecentMentors />
           </div>
           <div className=''>
-
+            <AllMentors />
           </div>
 
         </div>

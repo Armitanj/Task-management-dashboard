@@ -31,9 +31,9 @@ function MonthlyMentors(): JSX.Element {
   }, []);
 
   return (
-       <div className="p-6! sm:w-[800px] items-center justify-center!" >
+    <div className="p-6! sm:w-[800px] items-center justify-center!" >
       <div className='flex justify-between items-baseline sm:w-auto '>
-        <h2 className="text-xl sm:text-2xl font-semibold mb-8!">Monthly Mentors</h2>
+        <h2 className="text-xl sm:text-2xl font-semibold mb-6!">Monthly Mentors</h2>
         <div className='flex gap-4'>
           <button onClick={() => swiper?.slidePrev()}>
             <ArrowBackIosRoundedIcon className='cursor-pointer' />
@@ -63,23 +63,28 @@ function MonthlyMentors(): JSX.Element {
       >
         {mentors.map((mentor) => (
           <SwiperSlide key={mentor.id} className=''>
-            <Card className="p-5! w-[100%] sm:w-[350px] ps-7! my-2! flex items-center gap-4 shadow-xl rounded-2xl! bg-white">
-              <Avatar className="w-17! h-17!">
-                <img src={mentor.profilePic} alt={mentor.name} className="rounded-full" />
-              </Avatar>
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold">{mentor.name}</h3>
-                <p className="text-gray-500">{mentor.job}</p>
-                <div className='flex items-center gap-5 mt-2!'>
-                  <div className="flex items-center text-sm mt-2">
-                    <ClipboardCheck className="w-4 h-4 text-emerald-500 mr-2!" />
-                    <span>{mentor.tasksCompleted} Task</span>
-                  </div>
-                  <div className="flex flew-row items-center! text-sm">
-                    <Star className="w-4 h-4 text-yellow-600 mr-2!"></Star>
-                    <span>{mentor.rating} ({mentor.reviews} Reviews)</span>
-                  </div>
+            <Card className="p-5! w-full sm:w-[350px]  my-2!  shadow-xl rounded-2xl! bg-white">
+              <div className='flex items-center gap-5 justify-between'>
+
+                <Avatar className="w-17! h-17!">
+                  <img src={mentor.profilePic} alt={mentor.name} className="rounded-full" />
+                </Avatar>
+                <div className='flex-1'>
+                  <h3 className="text-lg font-semibold">{mentor.name}</h3>
+                  <p className="text-gray-500">{mentor.job}</p>
+
                 </div>
+              </div>
+              <div className='flex items-center mt-5! justify-between'>
+                <div className="flex items-center text-sm mt-2">
+                  <ClipboardCheck className="w-4 h-4 text-emerald-500 mr-2!" />
+                  <span>{mentor.tasksCompleted} Task</span>
+                </div>
+                <div className="flex flew-row items-center! text-sm">
+                  <Star className="w-4 h-4 text-yellow-600 mr-2!"></Star>
+                  <span>{mentor.rating} ({mentor.reviews} Reviews)</span>
+                </div>
+
               </div>
             </Card>
           </SwiperSlide>

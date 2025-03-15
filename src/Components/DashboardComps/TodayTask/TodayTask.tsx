@@ -27,7 +27,7 @@ export default function TodayTask(): JSX.Element {
                 {todayTask.filter(task => task.isToday === true).map((task) => (
                     <div key={task.id}>
                         <div className='flex items-baseline justify-between'>
-                            <div className='text-lg font-semibold mb-7!'>Today Task</div>
+                            <div className='text-lg font-semibold mb-6!'>Today Task</div>
                             <SlOptions className='cursor-pointer' />
                         </div>
                         <img src={task.image} />
@@ -61,7 +61,7 @@ export default function TodayTask(): JSX.Element {
                         </div>
 
                         <div className='flex justify-between mt-7! items-center'>
-                            <div className='text-lg font-semibold my-5! '>Detail Task</div>
+                            <div className='text-lg font-semibold my-6! '>Detail Task</div>
                             <span className='text-gray-500 text-sm'>{task.description}</span>
                         </div>
                     </div>
