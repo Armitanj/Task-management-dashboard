@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getTasks } from '../../Api/TaskList'
+import { getTasks } from '../../../Api/TaskList'
 import { Avatar, AvatarGroup, Card } from '@mui/material';
 import { HiOutlineClock } from 'react-icons/hi';
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,6 +19,11 @@ interface Tasks {
   participants: [{ name: string; avatar: string }];
   isToday: boolean;
 }
+// interface UpcomingTaskProps {
+//   pageTitle: string;
+
+// }
+
 export default function UpcomingTask(): JSX.Element {
   const [tasks, setTasks] = useState<Tasks[]>([])
   const [swiper, setSwiper] = useState<SwiperCore>();
@@ -28,9 +33,9 @@ export default function UpcomingTask(): JSX.Element {
   }, [])
 
   return (
-    <div className='p-6! sm:w-[800px] '>
+    <div className='p-6! sm:w-[800px] items-center justify-center!"'>
       <div className='flex justify-between  items-baseline sm:w-auto'>
-        <h2 className='text-xl sm:text-2xl font-semibold mb-8! '>Upcoming Task</h2>
+        <h2 className='text-xl sm:text-2xl font-semibold mb-8! '>UpComing Task</h2>
         <div className='flex gap-4'>
           <button onClick={() => swiper?.slidePrev()}>
             <ArrowBackIosRoundedIcon className='cursor-pointer' />
@@ -45,7 +50,6 @@ export default function UpcomingTask(): JSX.Element {
         <Swiper
           spaceBetween={20}
           pagination={{ clickable: true }}
-
           draggable={true}
           onSwiper={setSwiper}
           breakpoints={{
@@ -66,7 +70,7 @@ export default function UpcomingTask(): JSX.Element {
                 <img src={task.image} />
                 <div className='py-3!'>
                   <h3 className="text-lg font-semibold">{task.title}</h3>
-                  <p className="text-gray-500 w-70">{task.description}</p>
+                  <p className="text-gray-500 w-72">{task.description}</p>
                 </div>
                 <div className='flex justify-between pb-3!'>
                   <span className='font-medium'>Progress</span>
@@ -98,9 +102,6 @@ export default function UpcomingTask(): JSX.Element {
           ))}
         </Swiper>
       </div>
-
-
-
     </div>
   )
 }

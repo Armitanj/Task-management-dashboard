@@ -7,6 +7,7 @@ import { HiOutlineViewGrid } from "react-icons/hi";
 import { Link, useLocation } from 'react-router-dom';
 import './Menubar.css'
 
+
 export default function Menubar() {
 
   const location = useLocation(); // گرفتن مسیر فعلی

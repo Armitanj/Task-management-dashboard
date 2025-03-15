@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getMentors } from '../../Api/MentorsList';
+import { getMentors } from '../../../Api/MentorsList';
 import { Avatar, Card } from "@mui/material";
 import { Star, ClipboardCheck } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -31,7 +31,7 @@ function MonthlyMentors(): JSX.Element {
   }, []);
 
   return (
-       <div className="p-6!  sm:w-[800px] items-center justify-center!" >
+       <div className="p-6! sm:w-[800px] items-center justify-center!" >
       <div className='flex justify-between items-baseline sm:w-auto '>
         <h2 className="text-xl sm:text-2xl font-semibold mb-8!">Monthly Mentors</h2>
         <div className='flex gap-4'>

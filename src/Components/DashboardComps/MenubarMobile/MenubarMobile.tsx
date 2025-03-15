@@ -16,7 +16,7 @@ export default function MenubarMobile({ isOpen, onClose }: MenubarMobileProps) {
 
     const location = useLocation(); // گرفتن مسیر فعلی
     const [activePath, setActivePath] = React.useState<string>(location.pathname); // مسیر فعال
-
+    
     return (
         <>
             {/* منوی کشویی */}
