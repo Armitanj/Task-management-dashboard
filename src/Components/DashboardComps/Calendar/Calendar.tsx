@@ -19,40 +19,41 @@ const Calendar: React.FC = () => {
   const prevWeek = () => setCurrentDate((prev) => prev.subtract(7, "day"));
 
   return (
-    <Box sx={{ textAlign: "center", padding: "25px", backgroundColor: "#f5f5f5", borderRadius: "12px" }}>
-        <div className="bg-white p-[10px]! mt-5! rounded-2xl">
-      {/* هدر: ماه، سال و دکمه‌های جابجایی */}
-      <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
-        <IconButton onClick={prevWeek}><ChevronLeft /></IconButton>
-        <Typography variant="h6">{currentDate.format("MMMM YYYY")}</Typography>
-        <IconButton onClick={nextWeek}><ChevronRight /></IconButton>
+    <Box sx={{ textAlign: "center", padding: "25px", backgroundColor: "#f5f5f5", borderRadius: "12px", width: "100%" }}>
+      <div className="bg-white p-[6px]! mt-5! rounded-2xl">
+        {/* هدر: ماه، سال و دکمه‌های جابجایی */}
+        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
+          <IconButton onClick={prevWeek}><ChevronLeft /></IconButton>
+          <Typography variant="h6">{currentDate.format("MMMM YYYY")}</Typography>
+          <IconButton onClick={nextWeek}><ChevronRight /></IconButton>
 
-       
-      </Box>
 
-      {/* نمایش روزهای هفته */}
-      <Box sx={{ display: "flex", justifyContent: "flex-start", alignItems: "center", gap: "10px",overflowX: "auto", paddingBottom: "10px"  }}>
-        {weekDays.map((day) => (
-          <Box key={day.toString()} sx={{ textAlign: "center" }}>
-            <Typography variant="caption" sx={{ color: "#666" }}>{day.format("dd")}</Typography>
-            <Button
-              variant="contained"
-              sx={{
-                borderRadius: "50%",
-                padding: "10px",
-                minWidth: "44px",
-                marginTop:"0.5rem",
-                backgroundColor: day.isSame(dayjs(), "day") ? "#000" : "#fff",
-                color: day.isSame(dayjs(), "day") ? "#fff" : "#000",
-                boxShadow: day.isSame(dayjs(), "day") ? "0px 4px 10px rgba(0,0,0,0.2)" : "none",
-              }}
-            >
-              {day.format("DD")}
-            </Button>
-          </Box>
-        ))}
-      </Box>
-       </div>
+        </Box>
+
+        {/* نمایش روزهای هفته */}
+        <Box sx={{ display: "flex", justifyContent: "flex-start", alignItems: "center", gap: "0px", flexWrap: "wrap", paddingBottom: "10px"}}>
+          {weekDays.map((day) => (
+            <Box key={day.toString()} sx={{ textAlign: "center" }}>
+              <Typography variant="caption" sx={{ color: "#666" }}>{day.format("dd")}</Typography>
+              <Button
+                variant="contained"
+                sx={{
+                  borderRadius: "50%",
+                  padding: "10px",
+                  minWidth: "45px",
+                  marginTop: "1rem",
+                  display: 'flex',
+                  backgroundColor: day.isSame(dayjs(), "day") ? "#000" : "#fff",
+                  color: day.isSame(dayjs(), "day") ? "#fff" : "#000",
+                  boxShadow: day.isSame(dayjs(), "day") ? "0px 4px 10px rgba(0,0,0,0.2)" : "none",
+                }}
+              >
+                {day.format("DD")}
+              </Button>
+            </Box>
+          ))}
+        </Box>
+      </div>
     </Box>
   );
 };
