@@ -10,41 +10,37 @@ import { CategoryRounded, SearchOutlined, Sort } from '@mui/icons-material'
 import { MdTune } from "react-icons/md";
 import { getTasks } from '../../Api/TaskList'
 
+interface Tasks {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  progress: number;
+  time: string;
+  timeIcon: string;
+  participants: [{ name: string; avatar: string }];
+  isToday: boolean;
+  isTimeLimit: boolean;
+  isNew: boolean;
+}
 
-export default function Task(): JSX.Element {
+
+const Task: React.FC = () => {
+  const [tasks, setTasks] = useState<Tasks[]>([]);
+  const [search, setSearch] = useState<string>("");
+
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(prev => !prev);
-  const [search, setSearch] = useState('');
 
+useEffect(() => {
+  getTasks().then((data) => setTasks(data as Tasks[]))
+}, [])
 
-  interface Tasks {
-    id: number;
-    title: string;
-    description: string;
-    image: string;
-    progress: number;
-    time: string;
-    timeIcon: string;
-    participants: [{ name: string; avatar: string }];
-    isToday: boolean;
-    isTimeLimit: boolean;
-    isNew: boolean;
+  const filteredTasks = (tasks: Tasks[]) => {
+    return tasks.filter((task) => task.title.toLowerCase().includes(search.toLocaleLowerCase()))
   }
 
-  const [tasks, setTasks] = useState<Tasks[]>([]);
 
-
-  useEffect(() => {
-    const fetchTasks = async () => {
-      const result = await getTasks();
-      setTasks(result as Tasks[]);
-    };
-    fetchTasks();
-  }, []);
-
-  const filteredTasks = tasks.filter(task =>
-    task.title.toLowerCase().includes(search.toLowerCase())
-  );
 
   return (
     <>
@@ -60,7 +56,7 @@ export default function Task(): JSX.Element {
           <div className='flex-col gap-2 block sm:hidden font-[poppins-medium] mx-6! mt-2!'>
             <h1 className=' text-[24px]'>Explore Task</h1>
           </div>
-          
+
           {/* search bar */}
           <div className='flex justify-between justify-self-center w-[90%] ms-4! mt-4! ms:mt-auto'>
 
@@ -90,11 +86,11 @@ export default function Task(): JSX.Element {
           </div>
 
           <div>
-            <TimeLimitTask filteredTasks={filteredTasks}/>
+            <TimeLimitTask filteredTask={filteredTasks(tasks.filter((task) => task.isTimeLimit))} />
           </div>
 
           <div className=''>
-            <NewTask />
+            <NewTask  filteredTask={filteredTasks(tasks.filter((task) => task.isTimeLimit))}/>
           </div>
         </div>
 
@@ -111,3 +107,5 @@ export default function Task(): JSX.Element {
 
   )
 }
+
+export default Task;

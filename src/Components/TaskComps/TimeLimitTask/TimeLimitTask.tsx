@@ -20,11 +20,9 @@ interface Tasks {
     isTimeLimit: boolean;
     isNew: boolean;
 }
-export default function TimeLimitTask({filteredTasks}: {filteredTasks: Tasks[]}): JSX.Element {
+const TimeLimitTask: React.FC<{filteredTask :Tasks[]}> = ({filteredTask}) => {
+  const [tasks, setTasks] = useState<Tasks[]>([]);
 
-
-
-    const [tasks, setTasks] = useState<Tasks[]>(filteredTasks)
     const [swiper, setSwiper] = useState<SwiperCore>();
 
     useEffect(() => {
@@ -65,7 +63,7 @@ export default function TimeLimitTask({filteredTasks}: {filteredTasks: Tasks[]})
                         1024: { slidesPerView: 3.3}
                     }}
                 >
-                    {tasks.filter(task => task.isTimeLimit === true).map((task) => (
+                    {filteredTask.filter(task => task.isTimeLimit === true).map((task) => (
                         <SwiperSlide key={task.id} className='w-[330px]!'>
                             <Card className='w-full sm:w-[330px] rounded-2xl! p-8! bg-white shadow-2xl my-2!'>
                                 <img src={task.image} />
@@ -108,3 +106,5 @@ export default function TimeLimitTask({filteredTasks}: {filteredTasks: Tasks[]})
     )
 }
  
+
+export default TimeLimitTask;
