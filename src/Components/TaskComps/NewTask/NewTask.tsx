@@ -18,22 +18,22 @@ interface Tasks {
   participants: [{ name: string; avatar: string }];
   isToday: boolean;
   isTimeLimit: boolean;
-    isNew: boolean;
+  isNew: boolean;
 }
 
 export default function TimeLimitTask() {
-    
- 
-    
-      const [tasks, setTasks] = useState<Tasks[]>([])
-      const [swiper, setSwiper] = useState<SwiperCore>();
-    
-      useEffect(() => {
-        getTasks().then((data) => setTasks(data as Tasks[]));
-      }, [])
-    
+
+
+
+  const [tasks, setTasks] = useState<Tasks[]>([])
+  const [swiper, setSwiper] = useState<SwiperCore>();
+
+  useEffect(() => {
+    getTasks().then((data) => setTasks(data as Tasks[]));
+  }, [])
+
   return (
-   
+
     <div className='p-6! '>
       <div className='flex justify-between  items-baseline sm:w-auto'>
         <h2 className='text-xl sm:text-2xl font-semibold mb-8! '>New Task</h2>
@@ -61,13 +61,14 @@ export default function TimeLimitTask() {
               slidesPerView: 1,
             },
             768: {
-              slidesPerView: 3.3,
-            }
+              slidesPerView: 3,
+            },
+            1024: { slidesPerView: 3.3 }
           }}
         >
           {tasks.filter(task => task.isNew === true).map((task) => (
-            <SwiperSlide key={task.id}>
-              <Card className='w-[100%] sm:[350px] rounded-2xl! p-8! bg-white shadow-2xl my-2!'>
+            <SwiperSlide key={task.id} className='w-[330px]!'>
+              <Card className='w-full sm:w-[330px] rounded-2xl! p-8! bg-white shadow-2xl my-2!'>
                 <img src={task.image} />
                 <div className='py-3!'>
                   <h3 className="text-lg font-semibold">{task.title}</h3>
@@ -104,6 +105,6 @@ export default function TimeLimitTask() {
         </Swiper>
       </div>
     </div>
-   
+
   )
 }

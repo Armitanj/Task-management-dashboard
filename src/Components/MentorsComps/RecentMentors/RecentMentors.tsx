@@ -64,7 +64,7 @@ function RecentMentors(): JSX.Element {
 
 
         {mentors.filter(mentor => mentor.isRecent === true).map((mentor) => (
-          <SwiperSlide key={mentor.id} className='mr-6'>
+          <SwiperSlide key={mentor.id} className='mr-7! w-[325px]!'>
             <Card className="p-5! w-full sm:w-[325px] my-2! shadow-xl rounded-2xl! bg-white">
               <div className='flex items-center gap-5 justify-between'>
 
