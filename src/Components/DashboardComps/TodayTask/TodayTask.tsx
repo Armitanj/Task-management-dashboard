@@ -3,7 +3,9 @@ import { getTasks } from '../../../Api/TaskList';
 import { Avatar, AvatarGroup, Card } from '@mui/material';
 import { HiOutlineClock } from 'react-icons/hi';
 import { SlOptions } from "react-icons/sl";
+import TaskDetail from '../../TaskComps/TaskDetail/TaskDetail';
 import './TodayTask.css'
+import { Link } from 'react-router-dom';
 
 interface TodayTask {
     id: number;
@@ -69,7 +71,9 @@ export default function TodayTask(): JSX.Element {
                 <div className='flex items-center gap-3 text-[15px] mt-1!'><div className='taskDetailsSpan'>1</div><p>Understanding the tools in Figma</p></div>
                 <div className='flex items-center gap-3 text-[15px] my-5!'><div className='taskDetailsSpan'>2</div><p>Understand the basics of making designs</p></div>
                 <div className='flex items-center gap-3 text-[15px]'><div className='taskDetailsSpan'>3</div><p>Design a mobile application with figma</p></div>
-                <button className='bg-[#546FFF] w-full mt-12! rounded-xl p-3! text-white font-semibold hover:bg-[#546effdf] cursor-pointer transition delay-75 ease-in-out'>Go To Detail</button>
+                <Link to='/task-detail'>
+                    <button className='bg-[#546FFF] w-full mt-12! rounded-xl p-3! text-white font-semibold hover:bg-[#546effdf] cursor-pointer transition delay-75 ease-in-out'>Go To Detail</button>
+                </Link>
             </Card>
         </div>
     )

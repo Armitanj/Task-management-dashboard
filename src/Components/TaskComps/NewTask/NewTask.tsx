@@ -21,11 +21,8 @@ interface Tasks {
   isNew: boolean;
 }
 
-export default function TimeLimitTask() {
-
-
-
-  const [tasks, setTasks] = useState<Tasks[]>([])
+ const NewTask: React.FC<{filteredTask :Tasks[]}> = ({filteredTask}) => {
+   const [tasks, setTasks] = useState<Tasks[]>([]);
   const [swiper, setSwiper] = useState<SwiperCore>();
 
   useEffect(() => {
@@ -66,9 +63,9 @@ export default function TimeLimitTask() {
             1024: { slidesPerView: 3.3 }
           }}
         >
-          {tasks.filter(task => task.isNew === true).map((task) => (
-            <SwiperSlide key={task.id} className='w-[330px]!'>
-              <Card className='w-full sm:w-[330px] rounded-2xl! p-8! bg-white shadow-2xl my-2!'>
+          {filteredTask.filter(task => task.isNew === true).map((task) => (
+            <SwiperSlide key={task.id} className='w-full sm:w-[330px]!'>
+              <Card className=' rounded-2xl! p-8! bg-white shadow-2xl my-2!'>
                 <img src={task.image} />
                 <div className='py-3!'>
                   <h3 className="text-lg font-semibold">{task.title}</h3>
@@ -108,3 +105,4 @@ export default function TimeLimitTask() {
 
   )
 }
+export default NewTask;

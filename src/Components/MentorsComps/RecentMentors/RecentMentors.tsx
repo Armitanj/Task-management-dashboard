@@ -20,9 +20,11 @@ type Mentors = {
   rating: number;
   reviews: number;
   isRecent?: boolean;
+  isMain?: boolean;
 };
 
-function RecentMentors(): JSX.Element {
+const RecentMentors: React.FC<{filteredMentor: Mentors[]}> = ({ filteredMentor }) => {
+
   const [mentors, setMentors] = useState<Mentors[]>([]);
   const [swiper, setSwiper] = useState<SwiperCore>();
 
@@ -63,9 +65,9 @@ function RecentMentors(): JSX.Element {
       >
 
 
-        {mentors.filter(mentor => mentor.isRecent === true).map((mentor) => (
-          <SwiperSlide key={mentor.id} className='mr-7! w-[325px]!'>
-            <Card className="p-5! w-full sm:w-[325px] my-2! shadow-xl rounded-2xl! bg-white">
+        {filteredMentor.filter(mentor => mentor.isRecent === true).map((mentor) => (
+          <SwiperSlide key={mentor.id} className='w-full sm:w-[325px]!'>
+            <Card className="p-5!  my-2! shadow-xl rounded-2xl! bg-white">
               <div className='flex items-center gap-5 justify-between'>
 
                 <Avatar className="w-17! h-17!">

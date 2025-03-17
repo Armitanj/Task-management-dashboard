@@ -19,10 +19,11 @@ type Mentors = {
   tasksCompleted: number;
   rating: number;
   reviews: number;
-  isMain: boolean;
+  isRecent?: boolean;
+  isMain?: boolean;
 };
 
-function AllMentors(): JSX.Element {
+const AllMentors: React.FC<{filteredMentor: Mentors[]}> = ({ filteredMentor }) => {
   const [mentors, setMentors] = useState<Mentors[]>([]);
 
   useEffect(() => {
@@ -33,7 +34,7 @@ function AllMentors(): JSX.Element {
     <div className="p-6!" >
       <h2 className="text-xl sm:text-2xl font-semibold mb-8!">Mentors</h2>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-7 p-4  w-full'>
-        {mentors.filter(mentor => mentor.isMain === true).map((mentor) => (
+        {filteredMentor.filter(mentor => mentor.isMain === true).map((mentor) => (
           <Card key={mentor.id} className="p-5!  my-2! shadow-xl rounded-2xl! bg-white ">
             <div className='flex items-center gap-5 justify-between'>
 

@@ -6,6 +6,7 @@ import Mentor from './Pages/Mentor/Mentor.jsx'
 import Message from './Pages/Message/Message.jsx'
 import Setting from './Pages/Setting/Setting.jsx'
 import {Routes, Route } from 'react-router-dom'
+import TaskDetail from './Components/TaskComps/TaskDetail/TaskDetail'
 
 function App(): JSX.Element {
 
@@ -17,6 +18,7 @@ function App(): JSX.Element {
         <Route path="mentor" element={<Mentor />} />
         <Route path="message" element={<Message />} />
         <Route path="setting" element={<Setting />} />
+        <Route path="task-detail" element={<TaskDetail />} />
       </Routes>
    
   )

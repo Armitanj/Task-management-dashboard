@@ -20,11 +20,9 @@ interface Tasks {
     isTimeLimit: boolean;
     isNew: boolean;
 }
-export default function TimeLimitTask({filteredTasks}: {filteredTasks: Tasks[]}): JSX.Element {
+const TimeLimitTask: React.FC<{filteredTask :Tasks[]}> = ({filteredTask}) => {
+  const [tasks, setTasks] = useState<Tasks[]>([]);
 
-
-
-    const [tasks, setTasks] = useState<Tasks[]>(filteredTasks)
     const [swiper, setSwiper] = useState<SwiperCore>();
 
     useEffect(() => {
@@ -33,7 +31,7 @@ export default function TimeLimitTask({filteredTasks}: {filteredTasks: Tasks[]})
 
     return (
 
-        <div className='p-6! '>
+        <div className='p-6! w-full'>
             <div className='flex justify-between  items-baseline sm:w-auto'>
                 <h2 className='text-xl sm:text-2xl font-semibold mb-8! '>Time Limit</h2>
                 <div className='flex gap-4'>
@@ -65,9 +63,9 @@ export default function TimeLimitTask({filteredTasks}: {filteredTasks: Tasks[]})
                         1024: { slidesPerView: 3.3}
                     }}
                 >
-                    {tasks.filter(task => task.isTimeLimit === true).map((task) => (
-                        <SwiperSlide key={task.id} className='w-[330px]!'>
-                            <Card className='w-full sm:w-[330px] rounded-2xl! p-8! bg-white shadow-2xl my-2!'>
+                    {filteredTask.filter(task => task.isTimeLimit === true).map((task) => (
+                        <SwiperSlide key={task.id} className='w-full sm:w-[330px]!'>
+                            <Card className=' rounded-2xl! p-8! bg-white shadow-2xl my-2!'>
                                 <img src={task.image} />
                                 <div className='py-3!'>
                                     <h3 className="text-lg font-semibold">{task.title}</h3>
@@ -108,3 +106,5 @@ export default function TimeLimitTask({filteredTasks}: {filteredTasks: Tasks[]})
     )
 }
  
+
+export default TimeLimitTask;
