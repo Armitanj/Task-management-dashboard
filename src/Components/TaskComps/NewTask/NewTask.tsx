@@ -63,9 +63,9 @@ interface Tasks {
             1024: { slidesPerView: 3.3 }
           }}
         >
-          {filteredTask.filter(task => task.isNew === true).map((task) => (
-            <SwiperSlide key={task.id} className='w-full sm:w-[330px]!'>
-              <Card className=' rounded-2xl! p-8! bg-white shadow-2xl my-2!'>
+          {tasks.filter(task => task.isNew === true).map((task) => (
+            <SwiperSlide key={task.id} className='w-[330px]!'>
+              <Card className='w-full sm:w-[330px] rounded-2xl! p-8! bg-white shadow-2xl my-2!'>
                 <img src={task.image} />
                 <div className='py-3!'>
                   <h3 className="text-lg font-semibold">{task.title}</h3>
