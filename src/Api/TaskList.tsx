@@ -259,7 +259,7 @@ const tasks = [
   {
     id: 17,
     title: "Improve Security",
-    description: "Enhancing security measures for the app",
+    description: "Enhancing security measures",
     image: "/images/taskImages/task6.png",
     progress: 75,
     time: "6 Hours",
