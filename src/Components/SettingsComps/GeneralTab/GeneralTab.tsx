@@ -36,7 +36,7 @@ export default function GeneralTab() {
         <div>
             <div>
                 <p className='font-[poppins-medium] mt-4 py-1!!'>Language</p>
-                <FormControl sx={{ m: 1, width: { xs: 300, sm: 400 }, mt: 3}}>
+                <FormControl sx={{ m: 1, width: { xs: '95%', sm: 400 }, mt: 3}}>
 
                     <Select value={selectedLang} onChange={(e) => setSelectedLang(e.target.value)} sx={{ borderRadius: 3 }}>   
                         {languages.map((lang) => (
@@ -49,23 +49,23 @@ export default function GeneralTab() {
             </div>
             <div>
                 <p className='font-[poppins-medium] mt-5!'>Tomezone</p>
-                <FormControl sx={{ m: 1, width: { xs: 300, sm: 400 }, mt: 3, borderRadius: 12 }}>
+                <FormControl sx={{ m: 1, width: { xs: '95%', sm: 400 }, mt: 3, borderRadius: 12 }}>
                     <Select value={selectedTimezone} disabled sx={{ borderRadius: 3 }}>
                         <MenuItem value={selectedTimezone}>{selectedTimezone}</MenuItem>
                     </Select>
                 </FormControl>
             </div>
             <p className='font-[poppins-medium] mt-5!'>Tomezone</p>
-            <div className="flex justify-between sm:justify-normal sm:gap-8 mt-6! ms-4!">
+            <div className="flex justify-between sm:justify-normal w-[95%]! gap-6 sm:gap-8 mt-6! ms-4!">
                 <FormControlLabel
                     control={<Radio checked={timeFormat === '24'} onChange={() => setTimeFormat('24')} />}
                     label="24 Hours"
-                    className={timeFormat === '24' ? 'border border-blue-500 rounded-xl w-[136px]! sm:w-[184px]! sm:px-5! py-2!' : 'border border-gray-300 rounded-xl w-[136px]! sm:w-[184px]! sm:px-5! py-2!'}
+                    className={timeFormat === '24' ? 'border border-blue-500 rounded-xl w-[50%] sm:w-[184px] sm:px-5 py-2!' : 'border border-gray-300 rounded-xl w-[50%] sm:w-[184px] sm:px-5'}
                 />
                 <FormControlLabel
                     control={<Radio checked={timeFormat === '12'} onChange={() => setTimeFormat('12')} />}
                     label="12 Hours"
-                    className={timeFormat === '12' ? 'border border-blue-500 rounded-xl w-[136px]! sm:w-[184px]! sm:px-5! py-2!' : 'border border-gray-300 rounded-xl w-[136px]! sm:w-[184px]! sm:px-5! py-2!'}
+                    className={timeFormat === '12' ? 'border border-blue-500 rounded-xl w-[50%] sm:w-[184px] sm:px-5 py-2!' : 'border border-gray-300 rounded-xl w-[50%] sm:w-[184px] sm:px-5'}
                 />
             </div>
 
