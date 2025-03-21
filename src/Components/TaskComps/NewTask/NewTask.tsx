@@ -46,7 +46,7 @@ interface Tasks {
       <div className='flex flex-wrap gap-5 justify-evenly'>
 
         <Swiper
-          spaceBetween={20}
+          spaceBetween={30}
           pagination={{ clickable: true }}
           draggable={true}
           onSwiper={setSwiper}
