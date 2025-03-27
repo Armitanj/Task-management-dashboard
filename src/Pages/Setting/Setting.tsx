@@ -60,7 +60,7 @@ export default function Setting(): JSX.Element {
 
         <div className='w-full sm:min-w-[252px] '>
 
-          <div className='flex flex-col bg-white'>
+          <div className='flex flex-col bg-white '>
 
             {/* Nav bar */}
             <StyledEngineProvider injectFirst>
@@ -74,7 +74,7 @@ export default function Setting(): JSX.Element {
           </div>
 
           <div className='px-5! mt-5!'>
-            <div className=' bg-white rounded-xl pt-5! sm:px-5!'>
+            <div className=' bg-white rounded-lg pt-5! sm:px-5!'>
 
           
             <Box sx={{ width: '100%' , }}>
