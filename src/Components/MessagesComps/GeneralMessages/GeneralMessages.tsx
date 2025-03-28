@@ -17,7 +17,6 @@ interface Props {
 }
 
 
-
 export default function GeneralMessages({setSelectedChat }: Props): JSX.Element {
     const [search, setSearch] = useState<string>("");
 
