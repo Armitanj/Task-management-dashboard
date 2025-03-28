@@ -67,7 +67,7 @@ export default function ChatMessages({ selectedChat, onBack }: Props): JSX.Eleme
 
                         <div className='h-14 bg-white flex gap-6 px-5! mt-2!'>
                             <input type="text" placeholder='Message' className='w-full ps-4! text-lg focus:outline-0' />
-                            <button className='bg-[#546FFF] hover:bg-[#546effd9] transition cursor-pointer rounded-2xl p-3! px-5! text-white text-xl'><LuSend /></button>
+                            <button className='bg-[#546FFF] hover:bg-[#546effd9] transition cursor-pointer rounded-2xl px-4! text-center my-1! text-white text-lg'><LuSend /></button>
                         </div>
                     </div>
                 </div>
