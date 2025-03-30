@@ -2,6 +2,8 @@ import React from 'react';
 import { LuSend } from "react-icons/lu";
 import { ArrowLeft } from 'lucide-react';
 import { getChatMessages } from '../../../Api/ChatMessages';
+import { FaCircle } from "react-icons/fa";
+
 
 interface Chat {
     lastText: string;
@@ -20,7 +22,7 @@ interface Props {
 
 
 export default function ChatMessages({ selectedChat, onBack }: Props): JSX.Element {
-  
+
     const allMessages = selectedChat ? getChatMessages(selectedChat.id as "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8") : [];
 
     if (!selectedChat) {
@@ -38,8 +40,12 @@ export default function ChatMessages({ selectedChat, onBack }: Props): JSX.Eleme
                         </button>
                         <img src={selectedChat.avatar} alt="" className="w-14 h-14 rounded-full" />
                         <div>
-                            <p className="text-lg font-semibold">{selectedChat.name}</p>
-                            <p className="text-gray-500 text-sm">{selectedChat.status}</p>
+                            <p className="text-lg font-semibold mb-1!">{selectedChat.name}</p>
+                            <p className="text-gray-500 text-sm ">
+                                {selectedChat.status == "Online" ?
+                                (<div className='flex gap-3 items-center'><FaCircle className='text-green-400 text-xs!'/> {selectedChat.status}</div>) : <span className='text-gray-500'>Last Seen Recently</span>}
+
+                            </p>
                         </div>
                     </div>
 
