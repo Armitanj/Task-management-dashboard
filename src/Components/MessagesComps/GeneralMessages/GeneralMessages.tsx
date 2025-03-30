@@ -1,7 +1,6 @@
 import React, { useMemo, useState } from 'react'
 import ChatList from '../../../Api/ChatList'
 import { SearchOutlined } from '@mui/icons-material';
-// import { getChatMessages } from '../../../Api/ChatMessages';
 
 interface Chat {
     lastText: string;
@@ -20,7 +19,10 @@ interface Props {
 export default function GeneralMessages({setSelectedChat }: Props): JSX.Element {
     const [search, setSearch] = useState<string>("");
 
-    const chats = ChatList;
+    const chats = ChatList.map(chat => ({
+        ...chat,
+        lastText: chat.lastText ?? "No messages here yet..."
+    }));
 
     const filteredChats = useMemo(() => {
         return chats.filter((chat) =>
@@ -28,9 +30,7 @@ export default function GeneralMessages({setSelectedChat }: Props): JSX.Element 
         );
     }, [search, chats]);
 
-    // const messages = selectedChat ? getChatMessages(selectedChat.id) : [];
-    // const lastMessage = messages.length > 0 ? messages[messages.length - 1]?.text ?? "No messages here yet..." : "No messages here yet...";
-
+  
 
     return (
         <>
