@@ -21,15 +21,15 @@ type ChatItem = {
 };
 const lastMessages = Object.entries(chatMessages as ChatMessages).map(([chatId, messages = []]: [string, Message[] | undefined]) => {
   const lastMessage = messages?.length ? messages[messages.length - 1] : undefined;
-  
+
   return {
     chatId,
-    lastMessage: lastMessage 
+    lastMessage: lastMessage
       ? lastMessage.text.slice(0, 20) + (lastMessage.text.length > 20 ? "..." : "")
       : "No messages here yet..."
   };
 });
- 
+
 
 const chatList: ChatItem[] = [
   { senderId: "2", receiverId: "1", name: "Mr. Mae Watsica", avatar: "../../../images/avatars/img (1).png", id: "1", status: "Online" },
