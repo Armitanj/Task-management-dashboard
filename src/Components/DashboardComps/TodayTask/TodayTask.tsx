@@ -3,7 +3,6 @@ import { getTasks } from '../../../Api/TaskList';
 import { Avatar, AvatarGroup, Card } from '@mui/material';
 import { HiOutlineClock } from 'react-icons/hi';
 import { SlOptions } from "react-icons/sl";
-import TaskDetail from '../../TaskComps/TaskDetail/TaskDetail';
 import './TodayTask.css'
 import { Link } from 'react-router-dom';
 

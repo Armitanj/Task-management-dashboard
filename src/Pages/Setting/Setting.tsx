@@ -76,23 +76,23 @@ export default function Setting(): JSX.Element {
           <div className='px-5! mt-5!'>
             <div className=' bg-white rounded-lg pt-5! sm:px-5!'>
 
-          
-            <Box sx={{ width: '100%' , }}>
-              <Box sx={{ borderBottom: 1, borderColor: 'divider',paddingLeft: '1rem' }}>
-                <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                  <Tab label="General" {...a11yProps(0)} />
-                  <Tab label="Notification" {...a11yProps(1)} />
-                </Tabs>
+
+              <Box sx={{ width: '100%', }}>
+                <Box sx={{ borderBottom: 1, borderColor: 'divider', paddingLeft: '1rem' }}>
+                  <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                    <Tab label="General" {...a11yProps(0)} />
+                    <Tab label="Notification" {...a11yProps(1)} />
+                  </Tabs>
+                </Box>
+                <CustomTabPanel value={value} index={0}>
+                  <GeneralTab />
+                </CustomTabPanel>
+                <CustomTabPanel value={value} index={1}>
+                  <NotificationTab />
+                </CustomTabPanel>
+
               </Box>
-              <CustomTabPanel value={value} index={0}>
-                <GeneralTab />
-              </CustomTabPanel>
-              <CustomTabPanel value={value} index={1}>
-               <NotificationTab />
-              </CustomTabPanel>
-            
-            </Box>
-              </div>
+            </div>
           </div>
 
         </div>

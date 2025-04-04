@@ -5,7 +5,6 @@ import Option from '@mui/joy/Option';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
 import './Chart.css'
 
-// Define an interface for the props
 interface ChartProps {
   title: string;
 }
@@ -38,19 +37,19 @@ export default function Chart({ title }: ChartProps) {
 
 
       <LineChart className='bg-white rounded-2xl w-100'
-                xAxis={[{ scaleType: 'point', data: ['S', 'M', 'Tu', 'W', 'Th', 'F', 'Sa'] }]}
-                series={[
-                    {
-                        data: chartData,
-                        curve: 'monotoneX',
-                        color: '#000',
-                        area: false,
-                    }
-                ]}
-                // width={400}
-                grid={{ vertical: true }}
-                margin={{ left: 30, right: 30, top: 30, bottom: 30 }}
-            />
+        xAxis={[{ scaleType: 'point', data: ['S', 'M', 'Tu', 'W', 'Th', 'F', 'Sa'] }]}
+        series={[
+          {
+            data: chartData,
+            curve: 'monotoneX',
+            color: '#000',
+            area: false,
+          }
+        ]}
+        // width={400}
+        grid={{ vertical: true }}
+        margin={{ left: 30, right: 30, top: 30, bottom: 30 }}
+      />
     </div>
   )
 }

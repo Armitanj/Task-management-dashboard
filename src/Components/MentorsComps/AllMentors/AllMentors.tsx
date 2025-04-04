@@ -25,7 +25,7 @@ type Mentors = {
 
 const AllMentors: React.FC<{filteredMentor: Mentors[]}> = ({ filteredMentor }) => {
   const [mentors, setMentors] = useState<Mentors[]>([]);
-
+  
   useEffect(() => {
     getMentors().then((data) => setMentors(data as Mentors[]));
   }, []);

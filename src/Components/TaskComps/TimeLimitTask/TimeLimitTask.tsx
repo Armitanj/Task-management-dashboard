@@ -20,8 +20,8 @@ interface Tasks {
     isTimeLimit: boolean;
     isNew: boolean;
 }
-const TimeLimitTask: React.FC<{filteredTask :Tasks[]}> = ({filteredTask}) => {
-  const [tasks, setTasks] = useState<Tasks[]>([]);
+const TimeLimitTask: React.FC<{ filteredTask: Tasks[] }> = ({ filteredTask }) => {
+    const [tasks, setTasks] = useState<Tasks[]>([]);
 
     const [swiper, setSwiper] = useState<SwiperCore>();
 
@@ -60,7 +60,7 @@ const TimeLimitTask: React.FC<{filteredTask :Tasks[]}> = ({filteredTask}) => {
                         768: {
                             slidesPerView: 2,
                         },
-                        1024: { slidesPerView: 3.3}
+                        1024: { slidesPerView: 3.3 }
                     }}
                 >
                     {filteredTask.filter(task => task.isTimeLimit === true).map((task) => (
@@ -105,6 +105,6 @@ const TimeLimitTask: React.FC<{filteredTask :Tasks[]}> = ({filteredTask}) => {
 
     )
 }
- 
+
 
 export default TimeLimitTask;

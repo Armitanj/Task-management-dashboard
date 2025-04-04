@@ -17,9 +17,9 @@ export default function MenubarMobile({ isOpen, onClose }: MenubarMobileProps) {
     const location = useLocation(); // گرفتن مسیر فعلی
     const [activePath, setActivePath] = React.useState<string>(location.pathname); // مسیر فعال
 
-      React.useEffect(() => {
+    React.useEffect(() => {
         setActivePath(location.pathname);
-      }, [location.pathname]);
+    }, [location.pathname]);
 
     return (
         <>

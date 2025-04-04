@@ -16,7 +16,7 @@ interface Chat {
   id: string;
   status: string;
   senderId: string;
-  receiverId:string;
+  receiverId: string;
 }
 
 
@@ -50,12 +50,12 @@ export default function Message(): JSX.Element {
           </div>
 
           <div className="flex flex-row sm:border-s sm:border-s-[#8e92bc70] border-t border-t-[#8e92bc70]">
-            <div className={`w-full sm:w-[352px] bg-white sm:border-e sm:border-e-[#8e92bc70] ${selectedChat ? 'hidden sm:block' : 'block'}`}>    
-              <GeneralMessages setSelectedChat={setSelectedChat}/>
+            <div className={`w-full sm:w-[352px] bg-white sm:border-e sm:border-e-[#8e92bc70] ${selectedChat ? 'hidden sm:block' : 'block'}`}>
+              <GeneralMessages setSelectedChat={setSelectedChat} />
             </div>
 
-            <div className="w-full">  
-              <ChatMessages selectedChat={selectedChat} onBack={() => setSelectedChat(null)}/>
+            <div className="w-full">
+              <ChatMessages selectedChat={selectedChat} onBack={() => setSelectedChat(null)} />
             </div>
           </div>
 

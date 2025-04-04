@@ -62,7 +62,7 @@ const Mentor: React.FC = () => {
             </StyledEngineProvider>
 
             <br />
-            
+
             {/* Title */}
             <div className='flex-col gap-2 block sm:hidden font-[poppins-medium] mx-6! mt-2!'>
               <h1 className=' text-[24px]'>Explore Mentors</h1>
@@ -95,9 +95,9 @@ const Mentor: React.FC = () => {
                 <MdTune className="text-xl" />
               </div>
             </div>
-          {/* End of search bar */}
+            {/* End of search bar */}
           </div>
-         
+
 
           <div className='flex flex-col w-full!'>
             <div className=''>

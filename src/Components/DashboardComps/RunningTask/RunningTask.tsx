@@ -2,7 +2,6 @@ import { Box, CircularProgress, Typography } from '@mui/material'
 import React from 'react'
 import './RunningTask.css'
 
-// Define an interface for the props
 interface RunningTaskProps {
   runningTasks: number;
   totalTasks: number;

@@ -36,9 +36,9 @@ export default function GeneralTab() {
         <div>
             <div>
                 <p className='font-[poppins-medium] mt-4 py-1!!'>Language</p>
-                <FormControl sx={{ m: 1, width: { xs: '95%', sm: 400 }, mt: 3}}>
+                <FormControl sx={{ m: 1, width: { xs: '95%', sm: 400 }, mt: 3 }}>
 
-                    <Select value={selectedLang} onChange={(e) => setSelectedLang(e.target.value)} sx={{ borderRadius: 3 }}>   
+                    <Select value={selectedLang} onChange={(e) => setSelectedLang(e.target.value)} sx={{ borderRadius: 3 }}>
                         {languages.map((lang) => (
                             <MenuItem key={lang.code} value={lang.code}>
                                 {lang.name}

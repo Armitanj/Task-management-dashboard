@@ -9,14 +9,14 @@ interface Chat {
     id: string;
     status: string;
     senderId: string;
-    receiverId:string;
+    receiverId: string;
 }
 interface Props {
     setSelectedChat: (chat: Chat) => void;
 }
 
 
-export default function GeneralMessages({setSelectedChat }: Props): JSX.Element {
+export default function GeneralMessages({ setSelectedChat }: Props): JSX.Element {
     const [search, setSearch] = useState<string>("");
 
     const chats = ChatList.map(chat => ({
@@ -30,7 +30,7 @@ export default function GeneralMessages({setSelectedChat }: Props): JSX.Element 
         );
     }, [search, chats]);
 
-  
+
 
     return (
         <>
