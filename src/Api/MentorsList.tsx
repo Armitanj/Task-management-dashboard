@@ -3,7 +3,7 @@ const mentors = [
         id: 1,
         name: "Curious George",
         job: "UI/UX Design",
-        description:`Hi, I'm Jessica Jane. I am a doctoral student at Harvard University majoring in Web . . . `,
+        description: `Hi, I'm Jessica Jane. I am a doctoral student at Harvard University majoring in Web . . . `,
         profilePic: "https://i.pravatar.cc/150?img=1",
         tasksCompleted: 42,
         rating: 4.5,
@@ -15,7 +15,7 @@ const mentors = [
         id: 2,
         name: "Abraham Lincoln",
         job: "3D Design",
-        description:`Hi, I'm Alex Stanton. I am a doctoral student at Oxford University majoring in UI / UX  . . . `,
+        description: `Hi, I'm Alex Stanton. I am a doctoral student at Oxford University majoring in UI / UX  . . . `,
         profilePic: "https://i.pravatar.cc/150?img=2",
         tasksCompleted: 30,
         rating: 3.8,
@@ -27,7 +27,7 @@ const mentors = [
         id: 3,
         name: "Michael Brown",
         job: "Backend Developer",
-        description:`Hi, I'm Antoine Griezmann. I'm an Android Developer at Google company . . .`,
+        description: `Hi, I'm Antoine Griezmann. I'm an Android Developer at Google company . . .`,
         profilePic: "https://i.pravatar.cc/150?img=3",
         tasksCompleted: 55,
         rating: 4.9,
@@ -51,7 +51,7 @@ const mentors = [
         id: 5,
         name: "David Williams",
         job: "Mobile App Developer",
-        description:`Hi, I'm Richard Kyle. I'm a professional 2D Designer at Photoshop company . . .`,
+        description: `Hi, I'm Richard Kyle. I'm a professional 2D Designer at Photoshop company . . .`,
         profilePic: "https://i.pravatar.cc/150?img=5",
         tasksCompleted: 38,
         rating: 4.0,
@@ -63,7 +63,7 @@ const mentors = [
         id: 6,
         name: "Emma Jones",
         job: "Data Scientist",
-        description:`Hi, I'm Julia Philips. I'm a senior manager at Apple company . . .`,
+        description: `Hi, I'm Julia Philips. I'm a senior manager at Apple company . . .`,
         profilePic: "https://i.pravatar.cc/150?img=6",
         tasksCompleted: 45,
         rating: 4.7,
@@ -81,7 +81,7 @@ const mentors = [
         reviews: Math.floor(Math.random() * (200 - 10 + 1)) + 10,
         isRecent: true,
         isMain: false,
-  },
+    },
     {
         id: 8,
         name: "Olivia Davis",
@@ -121,4 +121,4 @@ export const getMentors = async () => {
     return new Promise((resolve) => {
         setTimeout(() => resolve(mentors), 500); // Simulating network delay
     });
- };
+};
