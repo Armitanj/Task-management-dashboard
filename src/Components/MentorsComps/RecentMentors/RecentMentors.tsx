@@ -35,7 +35,7 @@ const RecentMentors: React.FC<{filteredMentor: Mentors[]}> = ({ filteredMentor }
   return (
     <div className="p-6!" >
       <div className='flex justify-between items-baseline sm:w-auto '>
-        <h2 className="text-xl sm:text-2xl font-semibold mb-8!">Recent Mentors</h2>
+        <h2 className="text-xl sm:text-[22px] font-semibold mb-8!">Recent Mentors</h2>
         <div className='flex gap-4'>
           <button onClick={() => swiper?.slidePrev()}>
             <ArrowBackIosRoundedIcon className='cursor-pointer' />

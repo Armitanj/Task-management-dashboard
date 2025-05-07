@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { getTasks } from '../../../Api/TaskList';
 import { Avatar, AvatarGroup, Card } from '@mui/material';
 import { HiOutlineClock } from 'react-icons/hi';
@@ -19,9 +19,16 @@ interface TodayTask {
 export default function TodayTask(): JSX.Element {
     const [todayTask, setTodayTask] = useState<TodayTask[]>([]);
 
+
     useEffect(() => {
-        getTasks().then((data) => { setTodayTask(data as TodayTask[]) })
-    })
+        getTasks().then((data: any) => { 
+            const filteredTodayTasks = data?.filter((task: TodayTask) => task.isToday === true)
+            setTodayTask(filteredTodayTasks as TodayTask[])
+        })
+    }, [])
+    console.log('todayTask', todayTask); 
+
+    
     return (
         <div className='p-6! '>
             <Card className='h-auto rounded-2xl! p-8! bg-[#F5F5F7] shadow-2xl mb-3!'>

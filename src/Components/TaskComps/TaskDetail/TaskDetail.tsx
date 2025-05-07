@@ -38,6 +38,7 @@ const TaskDetail: React.FC = () => {
   const filteredTasks = (tasks: Tasks[]) => {
     return tasks.filter((task) => task.title.toLowerCase().includes(search.toLocaleLowerCase()))
   }
+console.log('filteredTasks', filteredTasks(tasks));
 
 
   return (

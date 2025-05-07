@@ -25,6 +25,10 @@ const NewTask: React.FC<{ filteredTask: Tasks[] }> = ({ }) => {
   const [tasks, setTasks] = useState<Tasks[]>([]);
   const [swiper, setSwiper] = useState<SwiperCore>();
 
+  const onClickHandler = (taskId: number) => {
+    console.log('taskId', taskId)
+  }
+
   useEffect(() => {
     getTasks().then((data) => setTasks(data as Tasks[]));
   }, [])
@@ -33,7 +37,7 @@ const NewTask: React.FC<{ filteredTask: Tasks[] }> = ({ }) => {
 
     <div className='p-6! '>
       <div className='flex justify-between  items-baseline sm:w-auto'>
-        <h2 className='text-xl sm:text-2xl font-semibold mb-8! '>New Task</h2>
+        <h2 className='text-xl sm:text-[22px] font-semibold mb-8! '>New Task</h2>
         <div className='flex gap-4'>
           <button onClick={() => swiper?.slidePrev()}>
             <ArrowBackIosRoundedIcon className='cursor-pointer' />
@@ -64,8 +68,11 @@ const NewTask: React.FC<{ filteredTask: Tasks[] }> = ({ }) => {
           }}
         >
           {tasks.filter(task => task.isNew === true).map((task) => (
-            <SwiperSlide key={task.id} className='w-full sm:w-[330px]! '>
-              <Card className='rounded-2xl! p-8! bg-white shadow-2xl my-2!'>
+            <SwiperSlide key={task.id} className='w-full sm:w-[330px]! ' 
+            onClick={() => onClickHandler(task.id)}>
+            
+              <Card className='rounded-2xl! p-8! bg-white shadow-2xl my-2!'
+              >
                 <img src={task.image} />
                 <div className='py-3!'>
                   <h3 className="text-lg font-semibold">{task.title}</h3>

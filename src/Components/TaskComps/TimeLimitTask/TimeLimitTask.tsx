@@ -33,7 +33,7 @@ const TimeLimitTask: React.FC<{ filteredTask: Tasks[] }> = ({ filteredTask }) =>
 
         <div className='p-6! w-full'>
             <div className='flex justify-between items-baseline sm:w-auto'>
-                <h2 className='text-xl sm:text-2xl font-semibold mb-8! '>Time Limit</h2>
+                <h2 className='text-xl sm:text-[22px] font-semibold mb-8! '>Time Limit</h2>
                 <div className='flex gap-4'>
                     <button onClick={() => swiper?.slidePrev()}>
                         <ArrowBackIosRoundedIcon className='cursor-pointer' />

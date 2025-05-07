@@ -30,7 +30,7 @@ export default function Navbar({ title, subTitle, onToggleMenu }: NavbarProps) {
         <div className="navComp flex justify-between items-center w-[100%]! px-10! pt-3!">
             <div>
                 <div className='flex-col gap-2 hidden sm:block font-[poppins-medium]'>
-                    <h1 className=' text-[24px]'>{title}</h1>
+                    <h1 className=' text-[22px]'>{title}</h1>
                     <span className='text-[#54577A]'>{subTitle}</span>
                 </div>
                 <RxHamburgerMenu onClick={onToggleMenu} className='block sm:hidden text-3xl cursor-pointer' />

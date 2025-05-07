@@ -25,19 +25,19 @@ export default function Menubar() {
       </div>
       <ul className='menuUl flex flex-col justify-between gap-6 font-[poppins-medium]'>
         <Link to="/" className={`item rounded-2xl flex gap-4 hover:bg-gray-100 hover:text-black transition ease-in-out ${activePath === "/" ? "active" : ""}`}>
-          <li className='flex justify-center items-center gap-3'><HiOutlineViewGrid className='text-2xl' />  Overview</li>
+          <li className='flex justify-center items-center gap-3'><HiOutlineViewGrid className='text-xl' />  Overview</li>
         </Link>
         <Link to="/task" className={`item rounded-2xl flex gap-4 hover:bg-gray-100 hover:text-black transition ease-in-out ${activePath === "/task" ? "active" : ""}`}>
-          <li className='flex justify-center items-center gap-3'><IoMdBook className='text-2xl' />  Task</li>
+          <li className='flex justify-center items-center gap-3'><IoMdBook className='text-xl' />  Task</li>
         </Link>
         <Link to="/mentor" className={`item rounded-2xl flex gap-4 hover:bg-gray-100 hover:text-black transition ease-in-out ${activePath === "/mentor" ? "active" : ""}`}>
-          <li className='flex justify-center items-center gap-3'><TbUserHexagon className='text-2xl' />  Mentors</li>
+          <li className='flex justify-center items-center gap-3'><TbUserHexagon className='text-xl' />  Mentors</li>
         </Link>
         <Link to="/message" className={`item rounded-2xl flex gap-4 hover:bg-gray-100 hover:text-black transition ease-in-out ${activePath === "/message" ? "active" : ""}`}>
-          <li className='flex justify-center items-center gap-3'><TbMessageDots className='text-2xl' />  Message</li>
+          <li className='flex justify-center items-center gap-3'><TbMessageDots className='text-xl' />  Message</li>
         </Link>
         <Link to="/setting" className={`item rounded-2xl flex gap-4 hover:bg-gray-100 hover:text-black transition ease-in-out ${activePath === "/setting" ? "active" : ""}`}>
-          <li className='flex justify-center items-center gap-3'><IoSettingsOutline className='text-2xl' />  Settings</li>
+          <li className='flex justify-center items-center gap-3'><IoSettingsOutline className='text-xl' />  Settings</li>
         </Link>
 
       </ul>

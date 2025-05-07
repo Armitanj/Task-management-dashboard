@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getMentors } from '../../../Api/MentorsList';
 import { Avatar, Card } from "@mui/material";
 import { Star, ClipboardCheck } from "lucide-react";
@@ -33,7 +33,7 @@ function MonthlyMentors(): JSX.Element {
   return (
     <div className="p-6! sm:w-[800px] items-center justify-center!" >
       <div className='flex justify-between items-baseline sm:w-auto '>
-        <h2 className="text-xl sm:text-2xl font-semibold mb-6!">Monthly Mentors</h2>
+        <h2 className="text-xl sm:text-[22px] font-semibold mb-6!">Monthly Mentors</h2>
         <div className='flex gap-4'>
           <button onClick={() => swiper?.slidePrev()}>
             <ArrowBackIosRoundedIcon className='cursor-pointer' />
