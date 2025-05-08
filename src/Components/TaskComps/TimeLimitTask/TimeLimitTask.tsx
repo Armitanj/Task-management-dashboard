@@ -29,6 +29,9 @@ const TimeLimitTask: React.FC<{ filteredTask: Tasks[] }> = ({ filteredTask }) =>
         getTasks().then((data) => setTasks(data as Tasks[]));
     }, [])
 
+    console.log("Task", tasks);
+    
+
     return (
 
         <div className='p-6! w-full'>

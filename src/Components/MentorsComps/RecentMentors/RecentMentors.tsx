@@ -32,6 +32,8 @@ const RecentMentors: React.FC<{filteredMentor: Mentors[]}> = ({ filteredMentor }
     getMentors().then((data) => setMentors(data as Mentors[]));
   }, []);
 
+  console.log("Mentors", mentors);
+  
   return (
     <div className="p-6!" >
       <div className='flex justify-between items-baseline sm:w-auto '>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import MenubarMobile from '../../../Components/DashboardComps/MenubarMobile/MenubarMobile'
 import { getTasks } from '../../../Api/TaskList'
-import Menubar from '../../DashboardComps/Menubar/Menubar';
+import Menubar from '../../Menubar/Menubar';
 import Navbar from '../../DashboardComps/Navbar/Navbar';
 import { StyledEngineProvider } from '@mui/material';
 import { CategoryRounded, SearchOutlined, Sort } from '@mui/icons-material';

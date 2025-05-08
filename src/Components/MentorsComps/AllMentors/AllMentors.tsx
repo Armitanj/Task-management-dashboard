@@ -30,6 +30,9 @@ const AllMentors: React.FC<{filteredMentor: Mentors[]}> = ({ filteredMentor }) =
     getMentors().then((data) => setMentors(data as Mentors[]));
   }, []);
 
+  console.log("Mentors", mentors);
+
+
   return (
     <div className="p-6!" >
       <h2 className="text-xl sm:text-[22px] font-semibold mb-8!">Mentors</h2>

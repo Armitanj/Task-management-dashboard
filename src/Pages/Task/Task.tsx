@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Task.css'
-import Menubar from '../../Components/DashboardComps/Menubar/Menubar'
+import Menubar from '../../Components/Menubar/Menubar'
 import Navbar from '../../Components/DashboardComps/Navbar/Navbar'
 import { StyledEngineProvider } from '@mui/material'
 import TimeLimitTask from '../../Components/TaskComps/TimeLimitTask/TimeLimitTask'
