@@ -29,7 +29,7 @@ const TimeLimitTask: React.FC<{ filteredTask: Tasks[] }> = ({ filteredTask }) =>
         getTasks().then((data) => setTasks(data as Tasks[]));
     }, [])
 
-    console.log("Task", tasks);
+    console.log("Tasks time limit:", tasks);
     
 
     return (
@@ -66,7 +66,7 @@ const TimeLimitTask: React.FC<{ filteredTask: Tasks[] }> = ({ filteredTask }) =>
                         1024: { slidesPerView: 3.3 }
                     }}
                 >
-                    {filteredTask.filter(task => task.isTimeLimit === true).map((task) => (
+                    {filteredTask.map((task) => (
                         <SwiperSlide key={task.id} className='w-full sm:w-[330px]!'>
                             <Card className=' rounded-2xl! p-8! bg-white shadow-2xl my-2!'>
                                 <img src={task.image} />

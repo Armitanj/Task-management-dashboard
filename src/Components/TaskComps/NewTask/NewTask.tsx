@@ -21,9 +21,10 @@ interface Tasks {
   isNew: boolean;
 }
 
-const NewTask: React.FC<{ filteredTask: Tasks[] }> = ({ }) => {
+const NewTask: React.FC<{ filteredTask: Tasks[] }> = ({ filteredTask }) => {
   const [tasks, setTasks] = useState<Tasks[]>([]);
   const [swiper, setSwiper] = useState<SwiperCore>();
+  console.log("Tasks new: ", tasks);
 
   const onClickHandler = (taskId: number) => {
     console.log('taskId', taskId)
@@ -67,10 +68,10 @@ const NewTask: React.FC<{ filteredTask: Tasks[] }> = ({ }) => {
             1024: { slidesPerView: 3.3 }
           }}
         >
-          {tasks.filter(task => task.isNew === true).map((task) => (
-            <SwiperSlide key={task.id} className='w-full sm:w-[330px]! ' 
-            onClick={() => onClickHandler(task.id)}>
-            
+          {filteredTask.map((task) => (
+            <SwiperSlide key={task.id} className='w-full sm:w-[330px]! '
+              onClick={() => onClickHandler(task.id)}>
+
               <Card className='rounded-2xl! p-8! bg-white shadow-2xl my-2!'
               >
                 <img src={task.image} />

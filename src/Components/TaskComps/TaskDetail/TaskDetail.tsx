@@ -4,9 +4,8 @@ import { getTasks } from '../../../Api/TaskList'
 import Menubar from '../../Menubar/Menubar';
 import Navbar from '../../DashboardComps/Navbar/Navbar';
 import { StyledEngineProvider } from '@mui/material';
-import { CategoryRounded, SearchOutlined, Sort } from '@mui/icons-material';
-import { MdTune } from 'react-icons/md';
 import { Link } from 'react-router-dom';
+import Search from '../../Searchbar/Search';
 
 
 interface Tasks {
@@ -26,7 +25,7 @@ interface Tasks {
 
 const TaskDetail: React.FC = () => {
   const [tasks, setTasks] = useState<Tasks[]>([]);
-  const [search, setSearch] = useState<string>("");
+  const [search, setSearch] = useState<string>("")
 
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(prev => !prev);
@@ -35,10 +34,11 @@ const TaskDetail: React.FC = () => {
     getTasks().then((data) => setTasks(data as Tasks[]))
   }, [])
 
-  const filteredTasks = (tasks: Tasks[]) => {
-    return tasks.filter((task) => task.title.toLowerCase().includes(search.toLocaleLowerCase()))
-  }
-console.log('filteredTasks', filteredTasks(tasks));
+  const filteredTasks = tasks.filter((task) =>
+    task.title.toLowerCase().includes(search.toLowerCase())
+  )
+  
+  console.log('filteredTasks', filteredTasks);
 
 
   return (
@@ -63,32 +63,7 @@ console.log('filteredTasks', filteredTasks(tasks));
 
 
             {/* search bar */}
-            <div className='flex justify-between justify-self-center w-[90%] ms-5! sm:ms-15! mt-5! ms:mt-auto pb-10!'>
-
-              <div className="relative mt-4 w-full lg:w-[45%]">
-                <SearchOutlined className="absolute right-4 top-2.5 text-gray-500 text-xl" />
-                <input
-                  type="text"
-                  placeholder="Search Task"
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                  className="w-full pl-5! pr-4 py-2! border border-gray-300 rounded-lg focus:outline-none text-lg"
-                />
-              </div>
-              <div className='hidden lg:block'>
-                <div className="flex gap-4 mt-4 ">
-                  <button className="flex items-center gap-2 bg-white border border-gray-300 px-5! py-2! rounded-lg hover:bg-gray-100 transition ">
-                    <CategoryRounded className="text-xl" /> Category
-                  </button>
-                  <button className="flex items-center gap-2 bg-white border border-gray-300 px-5! py-2! rounded-lg hover:bg-gray-100 transition ">
-                    <Sort className="text-xl" /> Sort By: Deadline
-                  </button>
-                </div>
-              </div>
-              <div className='lg:hidden flex items-center bg-white border border-gray-300 ms-4! px-5! py-2! rounded-lg hover:bg-gray-100 transition'>
-                <MdTune className="text-xl" />
-              </div>
-            </div>
+            <Search search={search} setSearch={setSearch} />
             {/* End of search bar */}
           </div>
 
@@ -142,9 +117,9 @@ console.log('filteredTasks', filteredTasks(tasks));
                 </div>
               </div>
               <div className='w-full h-40 border border-dashed mt-7! mb-3! rounded-xl p-4! border-blue-500'>
-                <input type="file" placeholder=''/>
+                <input type="file" placeholder='' />
               </div>
-                <span className='text-gray-600 text-sm'>*drag or browser from device</span>
+              <span className='text-gray-600 text-sm'>*drag or browser from device</span>
               <Link to='/'>
                 <button className='bg-[#546FFF] w-full mt-14! rounded-xl p-3! text-white font-semibold hover:bg-[#546effdf] cursor-pointer transition delay-75 ease-in-out'>Submit</button>
               </Link>
