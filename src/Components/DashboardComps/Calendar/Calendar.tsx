@@ -20,7 +20,7 @@ const Calendar: React.FC = () => {
 
   return (
     <Box sx={{ textAlign: "center", padding: "25px", backgroundColor: "#f5f5f5", borderRadius: "12px", width: "100%" }}>
-      <div className="bg-white p-[6px]! mt-5! rounded-2xl">
+      <div className="bg-white md:!p-[6px] !mt-5 rounded-2xl !sm:whitespace-nowrap">
         {/* هدر: ماه، سال و دکمه‌های جابجایی */}
         <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
           <IconButton onClick={prevWeek}><ChevronLeft /></IconButton>

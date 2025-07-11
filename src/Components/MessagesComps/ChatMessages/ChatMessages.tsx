@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { LuSend } from "react-icons/lu";
 import { ArrowLeft } from 'lucide-react';
 import { getChatMessages } from '../../../Api/ChatMessages';
@@ -69,7 +69,7 @@ export default function ChatMessages({ selectedChat, onBack }: Props): JSX.Eleme
             {selectedChat && (
                 <div>
                     {/* هدر چت */}
-                    <div className="headerChat flex items-center gap-4 bg-white p-4!">
+                    <div className="flex items-center gap-4 bg-white p-4!">
                         <button onClick={onBack} className="p-2 rounded-lg hover:bg-gray-100">
                             <ArrowLeft className="w-6 h-6" />
                         </button>
@@ -78,7 +78,8 @@ export default function ChatMessages({ selectedChat, onBack }: Props): JSX.Eleme
                             <p className="text-lg font-semibold mb-1!">{selectedChat.name}</p>
                             <p className="text-gray-500 text-sm ">
                                 {selectedChat.status == "Online" ?
-                                    (<div className='flex gap-3 items-center'><FaCircle className='text-green-400 text-xs!' /> {selectedChat.status}</div>) : <span className='text-gray-500'>Last Seen Recently</span>}
+                                    (<div className='flex gap-3 items-center'><FaCircle className='text-green-400 text-xs!' />
+                                     {selectedChat.status}</div>) : <span className='text-gray-500'>Last Seen Recently</span>}
 
                             </p>
                         </div>

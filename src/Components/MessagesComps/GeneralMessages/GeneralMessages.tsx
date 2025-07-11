@@ -1,6 +1,7 @@
-import React, { useMemo, useState } from 'react'
-import ChatList from '../../../Api/ChatList'
+import { useMemo, useState, useEffect } from 'react';
+import ChatList from '../../../Api/ChatList';
 import { SearchOutlined } from '@mui/icons-material';
+// import { CircularProgress } from '@mui/material';
 
 interface Chat {
     lastText: string;
@@ -15,14 +16,22 @@ interface Props {
     setSelectedChat: (chat: Chat) => void;
 }
 
-
 export default function GeneralMessages({ setSelectedChat }: Props): JSX.Element {
     const [search, setSearch] = useState<string>("");
+    // const [loading, setLoading] = useState<boolean>(true);
+    const [chats, setChats] = useState<Chat[]>([]);
 
-    const chats = ChatList.map(chat => ({
-        ...chat,
-        lastText: chat.lastText ?? "No messages here yet..."
-    }));
+    useEffect(() => {
+        // setLoading(true);
+        setTimeout(() => {
+            const loadedChats = ChatList.map(chat => ({
+                ...chat,
+                lastText: chat.lastText ?? "No messages here yet..."
+            }));
+            setChats(loadedChats);
+            // setLoading(false);
+        });
+    }, []);
 
     const filteredChats = useMemo(() => {
         return chats.filter((chat) =>
@@ -30,7 +39,13 @@ export default function GeneralMessages({ setSelectedChat }: Props): JSX.Element
         );
     }, [search, chats]);
 
-
+    // if (loading) {
+    //     return (
+    //         <div className="flex justify-center items-center h-[73vh]">
+    //            <CircularProgress />
+    //         </div>
+    //     );
+    // }
 
     return (
         <>
@@ -51,7 +66,7 @@ export default function GeneralMessages({ setSelectedChat }: Props): JSX.Element
             </div>
             {/* End of search bar */}
             <div className='flex'>
-                <div className='overflow-y-scroll h-[73vh] w-full'>
+                <div className={`overflow-y-scroll h-[73vh] !w-full`}>
                     {filteredChats.map((chat) => (
                         <div key={chat.id} className='flex flex-row gap-5 hover:bg-[#FAFAFA] transition m-4! p-5! rounded-lg cursor-pointer'
                             onClick={() => setSelectedChat(chat)}>

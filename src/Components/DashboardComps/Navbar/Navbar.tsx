@@ -2,7 +2,7 @@ import React from 'react'
 import Avatar from '@mui/material/Avatar'
 import Badge from '@mui/material/Badge'
 import { IoNotificationsOutline } from "react-icons/io5";
-import { RxHamburgerMenu } from "react-icons/rx"; import './Navbar.css'
+import { RxHamburgerMenu } from "react-icons/rx";
 import { Box, IconButton, Menu, MenuItem, Tooltip, Typography } from '@mui/material';
 
 interface NavbarProps {
@@ -27,7 +27,7 @@ export default function Navbar({ title, subTitle, onToggleMenu }: NavbarProps) {
     };
 
     return (
-        <div className="navComp flex justify-between items-center w-[100%]! px-10! pt-3!">
+        <div className="!mt-4 flex justify-between items-center !w-[100%] !px-10 !pt-3">
             <div>
                 <div className='flex-col gap-2 hidden sm:block font-[poppins-medium]'>
                     <h1 className=' text-[22px]'>{title}</h1>

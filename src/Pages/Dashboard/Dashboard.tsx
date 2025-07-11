@@ -4,7 +4,6 @@ import Menubar from '../../Components/Menubar/Menubar'
 import RightSide from '../../Components/DashboardComps/RightSide/RightSide'
 import MenubarMobile from '../../Components/DashboardComps/MenubarMobile/MenubarMobile';
 import { StyledEngineProvider } from '@mui/material/styles'
-import './Dashboard.css'
 import RunningTask from '../../Components/DashboardComps/RunningTask/RunningTask'
 import Chart from '../../Components/DashboardComps/Chart/Chart'
 import MonthlyMentors from '../../Components/DashboardComps/MonthlyMentors/MonthlyMentors'
@@ -18,8 +17,8 @@ export default function Dashboard(): JSX.Element {
     const toggleMenu = () => setMenuOpen(prev => !prev);
 
     return (
-        <div className='dashComponent flex justify-between flex-col sm:flex-row items-center sm:items-start'>
-            <div className='hidden sm:block'>
+        <div className='flex justify-between flex-col sm:flex-row items-center sm:items-start'>
+            <div className='hidden sm:block !min-h-full'>
                 <Menubar />
             </div>
             <div className='w-full'>
@@ -32,7 +31,7 @@ export default function Dashboard(): JSX.Element {
                 <div className='bg-[#FCFCFC] sm:bg-auto justify-center!'>
 
 
-                    <div className='flex-col gap-2 block sm:hidden font-[poppins-medium] mx-6! mt-2!'>
+                    <div className='flex-col gap-2 block sm:hidden font-[poppins-medium] !mx-6 !mt-2 !pt-4'>
                         <h1 className=' text-[24px]'>Hi, Skylar Dias</h1>
                         <span className='text-[#54577A]'>Let's finish your task today!</span>
                     </div>

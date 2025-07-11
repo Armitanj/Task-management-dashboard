@@ -1,6 +1,4 @@
 import { Box, CircularProgress, Typography } from '@mui/material'
-import React from 'react'
-import './RunningTask.css'
 
 interface RunningTaskProps {
   runningTasks: number;
