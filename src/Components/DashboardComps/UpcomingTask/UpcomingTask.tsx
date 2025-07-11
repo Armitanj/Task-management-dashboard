@@ -60,7 +60,7 @@ export default function UpcomingTask(): JSX.Element {
       ) : (
         <div className='flex flex-wrap gap-5 justify-evenly'>
           <Swiper
-            spaceBetween={20}
+            spaceBetween={15}
             pagination={{ clickable: true }}
             draggable={true}
             onSwiper={setSwiper}
@@ -79,7 +79,7 @@ export default function UpcomingTask(): JSX.Element {
             {tasks.filter(task => task.isToday === false).map((task) => (
               <SwiperSlide key={task.id}>
                 <Card style={{ transition: 'transform 200ms ease' }} className='sm:w-[350px] !rounded-2xl !p-8 bg-white shadow-2xl !my-2 transform
-  hover:[transform:scale(0.97)] md:!ml-8'>
+  hover:[transform:scale(0.97)] md:!ml-6'>
                   <img src={task.image} />
                   <div className='py-3!'>
                     <h3 className="text-lg font-semibold">{task.title}</h3>

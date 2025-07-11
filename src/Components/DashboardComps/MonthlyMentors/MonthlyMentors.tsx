@@ -56,7 +56,7 @@ function MonthlyMentors(): JSX.Element {
         </div>
       ) : (
         <Swiper
-          spaceBetween={20}
+          spaceBetween={15}
           pagination={{ clickable: true }}
           draggable={true}
           onSwiper={setSwiper}
@@ -77,7 +77,7 @@ function MonthlyMentors(): JSX.Element {
 
               <SwiperSlide key={mentor.id} className=''>
                 <Card style={{ transition: 'transform 200ms ease' }} className="!p-5 w-full sm:w-[350px] !my-2 shadow-xl !rounded-2xl bg-white transform
-            hover:[transform:scale(0.97)] md:!ml-8">
+            hover:[transform:scale(0.97)] md:!ml-6">
                   <div className='flex items-center gap-5 justify-between'>
 
                     <Avatar className="w-17! h-17!">
