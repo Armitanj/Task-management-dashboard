@@ -70,21 +70,21 @@ const NewTask: React.FC<{ filteredTask: Tasks[] }> = () => {
         }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-
-        // شرط اول: چک کنیم اینپوت‌ها خالی نباشن
-        if (!formData.title.trim() || !formData.description.trim() || !formData.time.trim()) {
-            alert('لطفا همه فیلدها را پر کنید!');
-            return;
-        }
-
-        // شرط دوم: تایم باید فقط عدد مثبت باشه
-        const timeValue = Number(formData.time);
-        if (isNaN(timeValue) || timeValue <= 0) {
-            alert('مدت زمان باید یک عدد مثبت باشد!');
-            return;
-        }
+       const handleSubmit = (e: React.FormEvent) => {
+           e.preventDefault();
+   
+           // شرط اول: چک کنیم اینپوت‌ها خالی نباشن
+           if (!formData.title.trim() || !formData.description.trim() || !formData.time.trim()) {
+               alert("Please fill all the fields first!");
+               return;
+           }
+   
+           // شرط دوم: تایم باید فقط عدد مثبت باشه
+           const timeValue = Number(formData.time);
+           if (isNaN(timeValue) || timeValue <= 0) {
+               alert("Duration should be positive!");
+               return;
+           }
 
    if (selectedTask) {
     // 📝 ویرایش تسک

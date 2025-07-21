@@ -75,14 +75,14 @@ const TimeLimitTask: React.FC<{ filteredTask: Tasks[] }> = () => {
 
         // شرط اول: چک کنیم اینپوت‌ها خالی نباشن
         if (!formData.title.trim() || !formData.description.trim() || !formData.time.trim()) {
-            alert('لطفا همه فیلدها را پر کنید!');
+            alert("Please fill all the fields first!");
             return;
         }
 
         // شرط دوم: تایم باید فقط عدد مثبت باشه
         const timeValue = Number(formData.time);
         if (isNaN(timeValue) || timeValue <= 0) {
-            alert('مدت زمان باید یک عدد مثبت باشد!');
+            alert("Duration should be positive!");
             return;
         }
 
