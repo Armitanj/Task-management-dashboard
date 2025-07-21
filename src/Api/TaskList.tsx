@@ -38,7 +38,7 @@ const tasks = [
     description: "Creating a responsive landing page",
     image: "/images/taskImages/task3.png",
     progress: 30,
-    time: "3 Hours",
+    time: "3",
     participants: [
       { name: "Emma Watson", avatar: "https://i.pravatar.cc/150?img=2" },
       { name: "John Doe", avatar: "https://i.pravatar.cc/150?img=3" },
@@ -54,7 +54,7 @@ const tasks = [
     description: "Writing project documentation",
     image: "/images/taskImages/task4.png",
     progress: 60,
-    time: "4 Hours",
+    time: "4",
     participants: [
       { name: "Sophia Brown", avatar: "https://i.pravatar.cc/150?img=5" },
       { name: "Olivia Martinez", avatar: "https://i.pravatar.cc/150?img=6" },
@@ -70,7 +70,7 @@ const tasks = [
     description: "Enhancing the user interface",
     image: "/images/taskImages/task5.png",
     progress: 80,
-    time: "5 Hours",
+    time: "5",
     participants: [
       { name: "Michael Lee", avatar: "https://i.pravatar.cc/150?img=4" },
       { name: "Alice Johnson", avatar: "https://i.pravatar.cc/150?img=1" },
@@ -86,7 +86,7 @@ const tasks = [
     description: "Improving website optimization",
     image: "/images/taskImages/task6.png",
     progress: 50,
-    time: "6 Hours",
+    time: "6",
     participants: [
       { name: "David Clark", avatar: "https://i.pravatar.cc/150?img=7" },
       { name: "Alice Johnson", avatar: "https://i.pravatar.cc/150?img=1" },
@@ -103,7 +103,7 @@ const tasks = [
     description: "Automating deployment pipeline",
     image: "/images/taskImages/task1.png",
     progress: 40,
-    time: "7 Hours",
+    time: "7",
     participants: [
       { name: "Olivia Martinez", avatar: "https://i.pravatar.cc/150?img=6" },
       { name: "Michael Lee", avatar: "https://i.pravatar.cc/150?img=4" },
@@ -120,7 +120,7 @@ const tasks = [
     description: "Performing integration testing",
     image: "/images/taskImages/task2.png",
     progress: 75,
-    time: "8 Hours",
+    time: "8",
     participants: [
       { name: "William Johnson", avatar: "https://i.pravatar.cc/150?img=8" },
       { name: "Michael Lee", avatar: "https://i.pravatar.cc/150?img=4" },
@@ -136,7 +136,7 @@ const tasks = [
     description: "Releasing the final build to production",
     image: "/images/taskImages/task3.png",
     progress: 90,
-    time: "9 Hours",
+    time: "9",
     participants: [
       { name: "Sophia Brown", avatar: "https://i.pravatar.cc/150?img=10" },
       { name: "William Johnson", avatar: "https://i.pravatar.cc/150?img=8" }
@@ -151,7 +151,7 @@ const tasks = [
     description: "Setting up monitoring tools and logs",
     image: "/images/taskImages/task4.png",
     progress: 55,
-    time: "10 Hours",
+    time: "10",
     participants: [
       { name: "Michael Lee", avatar: "https://i.pravatar.cc/150?img=10" },
       { name: "William Johnson", avatar: "https://i.pravatar.cc/150?img=4" }
@@ -167,7 +167,7 @@ const tasks = [
     description: "UI /UX Designer",
     image: "/images/todayTask/Image.png",
     progress: 90,
-    time: "1 Hours",
+    time: "1",
     participants: [
       { name: "Michael Lee", avatar: "https://i.pravatar.cc/150?img=8" },
       { name: "William Johnson", avatar: "https://i.pravatar.cc/150?img=4" },
@@ -184,7 +184,7 @@ const tasks = [
     description: "Creating an interactive dashboard UI",
     image: "/images/taskImages/task1.png",
     progress: 45,
-    time: "1 Hour",
+    time: "1",
     timeIcon: "https://cdn-icons-png.flaticon.com/512/1828/1828817.png",
     participants: [
       { name: "Curious George", avatar: "https://randomuser.me/api/portraits/men/1.jpg" },
@@ -200,7 +200,7 @@ const tasks = [
     description: "Debugging and resolving API issues",
     image: "/images/taskImages/task2.png",
     progress: 70,
-    time: "2 Hours",
+    time: "2",
     timeIcon: "https://cdn-icons-png.flaticon.com/512/1828/1828817.png",
     participants: [
       { name: "Alice Johnson", avatar: "https://randomuser.me/api/portraits/women/3.jpg" },
@@ -216,7 +216,7 @@ const tasks = [
     description: "Creating a responsive landing page",
     image: "/images/taskImages/task3.png",
     progress: 30,
-    time: "3 Hours",
+    time: "3",
     timeIcon: "https://cdn-icons-png.flaticon.com/512/1828/1828817.png",
     participants: [
       { name: "Emma Watson", avatar: "https://randomuser.me/api/portraits/women/5.jpg" },
@@ -232,7 +232,7 @@ const tasks = [
     description: "Configuring the project database",
     image: "/images/taskImages/task4.png",
     progress: 50,
-    time: "4 Hours",
+    time: "4",
     timeIcon: "https://cdn-icons-png.flaticon.com/512/1828/1828817.png",
     participants: [
       { name: "Sophia Brown", avatar: "https://randomuser.me/api/portraits/women/7.jpg" }
@@ -247,7 +247,7 @@ const tasks = [
     description: "Adding payment gateway integration",
     image: "/images/taskImages/task5.png",
     progress: 60,
-    time: "5 Hours",
+    time: "5",
     timeIcon: "https://cdn-icons-png.flaticon.com/512/1828/1828817.png",
     participants: [
       { name: "Michael Lee", avatar: "https://randomuser.me/api/portraits/men/8.jpg" }
@@ -262,7 +262,7 @@ const tasks = [
     description: "Enhancing security measures",
     image: "/images/taskImages/task6.png",
     progress: 75,
-    time: "6 Hours",
+    time: "6",
     timeIcon: "https://cdn-icons-png.flaticon.com/512/1828/1828817.png",
     participants: [
       { name: "David Clark", avatar: "https://randomuser.me/api/portraits/men/9.jpg" }
@@ -277,7 +277,7 @@ const tasks = [
     description: "Creating unit tests for application",
     image: "/images/taskImages/task1.png",
     progress: 40,
-    time: "7 Hours",
+    time: "7",
     timeIcon: "https://cdn-icons-png.flaticon.com/512/1828/1828817.png",
     participants: [
       { name: "Olivia Martinez", avatar: "https://randomuser.me/api/portraits/women/10.jpg" }
@@ -292,7 +292,7 @@ const tasks = [
     description: "Product launch strategy",
     image: "/images/taskImages/task2.png",
     progress: 85,
-    time: "8 Hours",
+    time: "8",
     timeIcon: "https://cdn-icons-png.flaticon.com/512/1828/1828817.png",
     participants: [
       { name: "William Johnson", avatar: "https://randomuser.me/api/portraits/men/11.jpg" }
@@ -307,7 +307,7 @@ const tasks = [
     description: "Deploying backend microservices",
     image: "/images/taskImages/task3.png",
     progress: 65,
-    time: "9 Hours",
+    time: "9",
     timeIcon: "https://cdn-icons-png.flaticon.com/512/1828/1828817.png",
     participants: [
       { name: "Sophia Brown", avatar: "https://randomuser.me/api/portraits/women/7.jpg" }
@@ -322,7 +322,7 @@ const tasks = [
     description: "Reviewing and analyzing user feedback",
     image: "/images/taskImages/task4.png",
     progress: 55,
-    time: "10 Hours",
+    time: "10",
     timeIcon: "https://cdn-icons-png.flaticon.com/512/1828/1828817.png",
     participants: [
       { name: "Michael Lee", avatar: "https://randomuser.me/api/portraits/men/8.jpg" }

@@ -1,4 +1,3 @@
-import React from 'react'
 import './App.css'
 import Dashboard from './Pages/Dashboard/Dashboard.jsx'
 import Task from './Pages/Task/Task.jsx'
